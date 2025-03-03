@@ -1,0 +1,12 @@
+C:\Users\Lenovo\source\repos\HelloGreetingApplication\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.deps.json
+C:\Users\Lenovo\source\repos\HelloGreetingApplication\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.dll
+C:\Users\Lenovo\source\repos\HelloGreetingApplication\RepositoryLayer\bin\Debug\net6.0\RepositoryLayer.pdb
+C:\Users\Lenovo\source\repos\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\source\repos\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.dll
+C:\Users\Lenovo\source\repos\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\refint\RepositoryLayer.dll
+C:\Users\Lenovo\source\repos\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.pdb
+C:\Users\Lenovo\source\repos\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\ref\RepositoryLayer.dll
+C:\Users\Lenovo\source\repos\HelloGreetingApplication\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.csproj.AssemblyReference.cache

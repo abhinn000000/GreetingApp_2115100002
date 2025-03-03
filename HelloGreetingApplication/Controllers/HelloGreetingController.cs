@@ -2,7 +2,10 @@ using System.Security.Cryptography.X509Certificates;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Model;
 using NLog;
+using BusinessLayer.Interface;
+
 namespace HelloGreetingApplication.Controllers
+
 {   /// <summary>
     /// Class providing API for HelloGreeting
     /// </summary>
@@ -11,9 +14,10 @@ namespace HelloGreetingApplication.Controllers
     public class HelloGreetingController : ControllerBase
     {
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
+        private  readonly IGreetingBL _greetingBL; 
 
-        public HelloGreetingController() {
-            //_logger = logger;
+        public HelloGreetingController(IGreetingBL greetingBL) {
+            _greetingBL = greetingBL;
             _logger.Info("Logger has been integrated");
 
         }
@@ -88,5 +92,14 @@ namespace HelloGreetingApplication.Controllers
             responseModel.Data = "Deletion successful";
             return Ok(responseModel);
         }
+
+        [HttpGet]
+        [Route("Hello")]
+        public IActionResult GetHello(string hello)
+        {
+                string result = _greetingBL.GreetBL(hello);
+                return Ok(result);
+        }
+
     }
 }

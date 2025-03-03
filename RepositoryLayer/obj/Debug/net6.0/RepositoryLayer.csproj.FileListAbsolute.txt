@@ -23,3 +23,6 @@ C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\RepositoryLayer\obj\
 C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\RepositoryLayer\obj\Debug\net6.0\refint\RepositoryLayer.dll
 C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\RepositoryLayer\obj\Debug\net6.0\RepositoryLayer.pdb
 C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\RepositoryLayer\obj\Debug\net6.0\ref\RepositoryLayer.dll
+C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\RepositoryLayer\bin\Debug\net6.0\ModelLayer.dll
+C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\RepositoryLayer\bin\Debug\net6.0\ModelLayer.pdb
+C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\RepositoryLayer\obj\Debug\net6.0\Reposito.A0A61804.Up2Date

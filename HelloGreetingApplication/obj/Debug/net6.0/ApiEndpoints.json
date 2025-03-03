@@ -75,14 +75,19 @@
   },
   {
     "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
-    "Method": "GetHello",
-    "RelativePath": "HelloGreeting/Hello",
+    "Method": "GetGreeting",
+    "RelativePath": "HelloGreeting/GetGreeting",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "hello",
+        "Name": "firstName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "lastName",
         "Type": "System.String",
         "IsRequired": false
       }

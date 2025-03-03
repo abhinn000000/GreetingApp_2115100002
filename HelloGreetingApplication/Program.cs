@@ -2,8 +2,8 @@ using NLog.Web;
 using NLog;
 using NLog.Config;
 using BusinessLayer.Interface;
-using BusinessLayer.Service;
-using RepositoryLayer.Service;
+using BusinessLayer.Services;
+using RepositoryLayer.Services;
 using RepositoryLayer.Interface;
 
 

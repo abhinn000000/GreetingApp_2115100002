@@ -274,7 +274,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Lenovo\\OneDrive\\Desktop\\UC2\\GreetingApp_2115100002\\ModelLayer\\ModelLayer.csproj": {
+                "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\UC2\\GreetingApp_2115100002\\ModelLayer\\ModelLayer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

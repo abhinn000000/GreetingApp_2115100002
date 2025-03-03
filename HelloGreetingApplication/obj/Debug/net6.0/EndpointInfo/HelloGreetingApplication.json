@@ -133,14 +133,21 @@
         }
       }
     },
-    "/HelloGreeting/Hello": {
+    "/HelloGreeting/GetGreeting": {
       "get": {
         "tags": [
           "HelloGreeting"
         ],
         "parameters": [
           {
-            "name": "hello",
+            "name": "firstName",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "lastName",
             "in": "query",
             "schema": {
               "type": "string"

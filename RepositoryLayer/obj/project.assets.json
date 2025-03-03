@@ -210,6 +210,20 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "ModelLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "NLog": "5.4.0",
+          "NLog.Web.AspNetCore": "5.4.0"
+        },
+        "compile": {
+          "bin/placeholder/ModelLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ModelLayer.dll": {}
+        }
       }
     }
   },
@@ -527,10 +541,16 @@
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "ModelLayer/1.0.0": {
+      "type": "project",
+      "path": "../ModelLayer/ModelLayer.csproj",
+      "msbuildProject": "../ModelLayer/ModelLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "ModelLayer >= 1.0.0",
       "NLog >= 5.4.0",
       "NLog.Web.AspNetCore >= 5.4.0"
     ]
@@ -566,7 +586,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Lenovo\\OneDrive\\Desktop\\UC2\\GreetingApp_2115100002\\ModelLayer\\ModelLayer.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\UC2\\GreetingApp_2115100002\\ModelLayer\\ModelLayer.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

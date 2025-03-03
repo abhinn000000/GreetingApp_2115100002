@@ -542,11 +542,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\HelloGreetingApplication\\ModelLayer\\ModelLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\UC2\\GreetingApp_2115100002\\ModelLayer\\ModelLayer.csproj",
       "projectName": "ModelLayer",
-      "projectPath": "C:\\Users\\Lenovo\\source\\repos\\HelloGreetingApplication\\ModelLayer\\ModelLayer.csproj",
+      "projectPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\UC2\\GreetingApp_2115100002\\ModelLayer\\ModelLayer.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\source\\repos\\HelloGreetingApplication\\ModelLayer\\obj\\",
+      "outputPath": "C:\\Users\\Lenovo\\OneDrive\\Desktop\\UC2\\GreetingApp_2115100002\\ModelLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

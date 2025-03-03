@@ -7,8 +7,10 @@ using RepositoryLayer.Interface;
 
 namespace RepositoryLayer.Service
 {
-    internal class GreetingRL : IGreetingRL
+    public class GreetingRL : IGreetingRL
     {
-
+        public string GreetRL(string hello) {
+            return hello;
+        }
     }
 }

@@ -9,21 +9,21 @@ namespace RepositoryLayer.Services
     {
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
 
-        public string Greeting(string firstName, string lastName)
+        public string Greeting(UserGreetModel usergreet)
         {
             string greetingMessage = string.Empty;
 
-            if (!string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(lastName))
+            if (!string.IsNullOrEmpty(usergreet.FirstName) && !string.IsNullOrEmpty(usergreet.LastName))
             {
-                greetingMessage = $"Hello {firstName} {lastName}";
+                greetingMessage = $"Hello  {usergreet.FirstName} {usergreet.LastName}";
             }
-            else if (!string.IsNullOrEmpty(firstName))
+            else if (!string.IsNullOrEmpty(usergreet.FirstName))
             {
-                greetingMessage = $"Hello {firstName}";
+                greetingMessage = $"Hello  {usergreet.FirstName}";
             }
-            else if (!string.IsNullOrEmpty(lastName))
+            else if (!string.IsNullOrEmpty(usergreet.LastName))
             {
-                greetingMessage = $"Hello {lastName}";
+                greetingMessage = $"Hello  {usergreet.LastName}";
             }
             else
             {

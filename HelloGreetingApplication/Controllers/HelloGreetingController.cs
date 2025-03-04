@@ -94,48 +94,28 @@ namespace HelloGreetingApplication.Controllers
         }
 
         [HttpGet]
-        [Route("GetGreeting")]
-        public IActionResult GetGreeting(string? firstName, string? lastName)
+        [Route("HelloWorld")]
+        public string GetHello() {
+            return _greetingBL.greet();
+        }
+
+        [HttpPost]
+        [Route("PostGreeting")]
+        public IActionResult PostGreeting(UserGreetModel usergreet)
         {
             /// <summary>
             /// method to greet the user with first name,last name or both
             /// </summary>
-            try
-            {
+            var result = _greetingBL.UserGreet(usergreet);
                 ResponseModel<string> responseModel = new ResponseModel<string>();
-                _logger.Info("User has been greeted");
-                string greetingMessage = string.Empty;
-
-                if (!string.IsNullOrEmpty(firstName) && !string.IsNullOrEmpty(lastName))
-                {
-                    greetingMessage = $"Hello {firstName} {lastName}";
-                }
-                else if (!string.IsNullOrEmpty(firstName))
-                {
-                    greetingMessage = $"Hello {firstName}";
-                }
-                else if (!string.IsNullOrEmpty(lastName))
-                {
-                    greetingMessage = $"Hello {lastName}";
-                }
-                else
-                {
-                    greetingMessage = "Hello World";
-                }
-
                 responseModel.Success = true;
                 responseModel.Message = "Greeting Generated Successfully";
-                responseModel.Data = greetingMessage;
-
-                _logger.Info($"Greeting Message: {greetingMessage}");
+                responseModel.Data = result;
+                
+                _logger.Info("User has been greeted");
 
                 return Ok(responseModel);
             }
-            catch (Exception ex)
-            {
-                _logger.Error($"Exception Occurred: {ex.Message}");
-                return StatusCode(500, "Something went wrong: " + ex.Message);
-            }
-        }
+            
     }
 }

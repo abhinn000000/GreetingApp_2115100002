@@ -44,6 +44,18 @@ namespace RepositoryLayer.Services
             }
             return null;
         }
+        public GreetingEntity EditGreeting(int id, GreetingModel greetingModel)
+        {
+            var entity = _context.GreetMessages.FirstOrDefault(g => g.Id == id);
+            if (entity != null)
+            {
+                entity.Greeting = greetingModel.GreetingMessage;
+                _context.GreetMessages.Update(entity);
+                _context.SaveChanges();
+                return entity; // Returning the updated Entity
+            }
+            return null; // If not found
+        }
         public List<GreetingEntity> GetAllGreetings()
         {
             return _context.GreetMessages.ToList();

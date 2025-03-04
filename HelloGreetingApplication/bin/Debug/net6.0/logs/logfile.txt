@@ -393,3 +393,77 @@
 2025-03-04 12:34:13.1488 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication) in 53.3942ms 
 2025-03-04 12:34:13.1488 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication)' 
 2025-03-04 12:34:13.1488 [Info] Request finished HTTP/2 POST https://localhost:7150/HelloGreeting/PostGreeting application/json 51 - 200 - application/json;+charset=utf-8 109.1110ms 
+2025-03-04 22:20:27.9925 [Info] Entity Framework Core 6.0.36 initialized 'GreetingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-04 22:20:46.1231 [Info] Entity Framework Core 6.0.36 initialized 'GreetingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-04 22:20:46.7058 [Info] Executed DbCommand (214ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [HelloGreetingAPI]; 
+2025-03-04 22:20:46.7842 [Info] Executed DbCommand (77ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [HelloGreetingAPI] SET READ_COMMITTED_SNAPSHOT ON;
+END; 
+2025-03-04 22:20:46.7904 [Info] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2025-03-04 22:20:46.8747 [Info] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+); 
+2025-03-04 22:20:46.8747 [Info] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2025-03-04 22:20:46.8916 [Info] Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2025-03-04 22:20:47.7561 [Info] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2025-03-04 22:20:47.7580 [Info] Applying migration '20250304165028_InitialMigration'. 
+2025-03-04 22:20:47.7734 [Info] Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [GreetMessages] (
+    [Id] int NOT NULL IDENTITY,
+    [Greeting] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_GreetMessages] PRIMARY KEY ([Id])
+); 
+2025-03-04 22:20:47.7929 [Info] Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250304165028_InitialMigration', N'6.0.36'); 
+2025-03-04 22:27:10.3959 [Info] Now listening on: https://localhost:7150 
+2025-03-04 22:27:10.4141 [Info] Now listening on: http://localhost:5143 
+2025-03-04 22:27:10.5215 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-04 22:27:10.5573 [Info] Hosting environment: Development 
+2025-03-04 22:27:10.5573 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-04 22:27:11.8311 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-04 22:27:12.4475 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 634.4590ms 
+2025-03-04 22:27:12.6352 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-04 22:27:12.6352 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-04 22:27:12.6352 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 7.2928ms 
+2025-03-04 22:27:12.6484 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 13.0930ms 
+2025-03-04 22:27:12.7284 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-04 22:27:12.8731 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 144.7720ms 
+2025-03-04 22:27:13.0277 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-04 22:27:13.0491 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 21.3512ms 
+2025-03-04 22:27:47.1536 [Info] Request starting HTTP/2 POST https://localhost:7150/HelloGreeting/greetmessage application/json 39 
+2025-03-04 22:27:47.1660 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GreetMessage (HelloGreetingApplication)' 
+2025-03-04 22:27:47.2021 [Info] Route matched with {action = "GreetMessage", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GreetMessage(ModelLayer.Model.GreetingModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 22:27:47.4324 [Info] Logger has been integrated 
+2025-03-04 22:27:47.9808 [Info] Entity Framework Core 6.0.36 initialized 'GreetingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-04 22:27:48.9701 [Info] Executed DbCommand (99ms) [Parameters=[@__greetModel_GreetingMessage_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [GreetMessages] AS [g]
+        WHERE [g].[Greeting] = @__greetModel_GreetingMessage_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2025-03-04 22:27:49.2616 [Info] Executed DbCommand (26ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [GreetMessages] ([Greeting])
+VALUES (@p0);
+SELECT [Id]
+FROM [GreetMessages]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity(); 
+2025-03-04 22:27:49.3057 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-04 22:27:49.3057 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GreetMessage (HelloGreetingApplication) in 2109.0378ms 
+2025-03-04 22:27:49.3057 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GreetMessage (HelloGreetingApplication)' 
+2025-03-04 22:27:49.3209 [Info] Request finished HTTP/2 POST https://localhost:7150/HelloGreeting/greetmessage application/json 39 - 200 - application/json;+charset=utf-8 2175.0626ms 

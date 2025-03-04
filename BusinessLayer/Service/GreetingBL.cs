@@ -48,7 +48,7 @@ namespace BusinessLayer.Services
         }
         public GreetingModel EditGreeting(int id, GreetingModel greetingModel)
         {
-            var result = _greetingRL.EditGreeting(id, greetingModel); // Calling Repository Layer
+            var result = _greetingRL.EditGreeting(id, greetingModel); 
             if (result != null)
             {
                 return new GreetingModel()
@@ -58,6 +58,15 @@ namespace BusinessLayer.Services
                 };
             }
             return null;
+        }
+        public bool DeleteGreeting(int id)
+        {
+            var result = _greetingRL.DeleteGreeting(id);
+            if (result)
+            {
+                return true; 
+            }
+            return false; 
         }
     }
 }

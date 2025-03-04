@@ -278,3 +278,118 @@
 2025-03-04 01:15:29.8361 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetGreeting (HelloGreetingApplication) in 5.2014ms 
 2025-03-04 01:15:29.8361 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreeting (HelloGreetingApplication)' 
 2025-03-04 01:15:29.8361 [Info] Request finished HTTP/2 GET https://localhost:7150/HelloGreeting/GetGreeting - - - 200 - application/json;+charset=utf-8 7.2149ms 
+2025-03-04 11:54:48.7444 [Info] Now listening on: https://localhost:7150 
+2025-03-04 11:54:48.7665 [Info] Now listening on: http://localhost:5143 
+2025-03-04 11:54:48.8216 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-04 11:54:48.8216 [Info] Hosting environment: Development 
+2025-03-04 11:54:48.8216 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-04 11:54:50.3618 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-04 11:54:50.7265 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 376.9552ms 
+2025-03-04 11:54:50.8241 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.css - - 
+2025-03-04 11:54:50.8241 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/swagger-ui.css - - 
+2025-03-04 11:54:50.8241 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/swagger-ui-standalone-preset.js - - 
+2025-03-04 11:54:50.8241 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/swagger-ui-bundle.js - - 
+2025-03-04 11:54:50.8241 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-04 11:54:50.8241 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-04 11:54:50.8241 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 8.2046ms 
+2025-03-04 11:54:50.8419 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 14.1158ms 
+2025-03-04 11:54:50.8419 [Info] The file /index.css was not modified 
+2025-03-04 11:54:50.8419 [Info] The file /swagger-ui-standalone-preset.js was not modified 
+2025-03-04 11:54:50.8419 [Info] The file /swagger-ui-bundle.js was not modified 
+2025-03-04 11:54:50.8419 [Info] The file /swagger-ui.css was not modified 
+2025-03-04 11:54:50.8516 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-04 11:54:50.8516 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 32.8938ms 
+2025-03-04 11:54:50.8516 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/swagger-ui.css - - - 304 - text/css 33.3095ms 
+2025-03-04 11:54:50.8516 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.css - - - 304 - text/css 33.3306ms 
+2025-03-04 11:54:50.8516 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/swagger-ui-bundle.js - - - 304 - application/javascript 33.2657ms 
+2025-03-04 11:54:51.0326 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 180.9098ms 
+2025-03-04 11:54:51.3160 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-04 11:54:51.3409 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 24.8738ms 
+2025-03-04 11:54:59.6047 [Info] Request starting HTTP/2 GET https://localhost:7150/HelloGreeting/HelloWorld - - 
+2025-03-04 11:54:59.6173 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetHello (HelloGreetingApplication)' 
+2025-03-04 11:54:59.6345 [Info] Route matched with {action = "GetHello", controller = "HelloGreeting"}. Executing controller action with signature System.String GetHello() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 11:54:59.6345 [Info] Logger has been integrated 
+2025-03-04 11:54:59.6345 [Info] Executing ObjectResult, writing value of type 'System.String'. 
+2025-03-04 11:54:59.6524 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetHello (HelloGreetingApplication) in 13.1483ms 
+2025-03-04 11:54:59.6524 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetHello (HelloGreetingApplication)' 
+2025-03-04 11:54:59.6524 [Info] Request finished HTTP/2 GET https://localhost:7150/HelloGreeting/HelloWorld - - - 200 - text/plain;+charset=utf-8 48.1167ms 
+2025-03-04 11:56:36.2937 [Info] Now listening on: https://localhost:7150 
+2025-03-04 11:56:36.3546 [Info] Now listening on: http://localhost:5143 
+2025-03-04 11:56:36.4220 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-04 11:56:36.4220 [Info] Hosting environment: Development 
+2025-03-04 11:56:36.4220 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-04 11:56:37.0595 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-04 11:56:37.4040 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 347.5530ms 
+2025-03-04 11:56:37.5101 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-04 11:56:37.5101 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-04 11:56:37.5305 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-04 11:56:37.5454 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 35.3641ms 
+2025-03-04 11:56:37.5454 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 39.7183ms 
+2025-03-04 11:56:37.7103 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 179.8124ms 
+2025-03-04 11:56:37.9505 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-04 11:56:37.9631 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 23.4551ms 
+2025-03-04 11:56:53.3861 [Info] Request starting HTTP/2 POST https://localhost:7150/HelloGreeting/PostGreeting?firstName=tree&lastName=name - 0 
+2025-03-04 11:56:53.4011 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication)' 
+2025-03-04 11:56:53.4417 [Info] Route matched with {action = "PostGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PostGreeting(System.String, System.String) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 11:56:53.4489 [Info] Logger has been integrated 
+2025-03-04 11:56:53.4931 [Info] User has been greeted 
+2025-03-04 11:56:53.4931 [Info] Greeting Message: Hello tree name 
+2025-03-04 11:56:53.4931 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-04 11:56:53.4931 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication) in 55.9131ms 
+2025-03-04 11:56:53.4931 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication)' 
+2025-03-04 11:56:53.4931 [Info] Request finished HTTP/2 POST https://localhost:7150/HelloGreeting/PostGreeting?firstName=tree&lastName=name - 0 - 200 - application/json;+charset=utf-8 110.8881ms 
+2025-03-04 11:57:02.9772 [Info] Request starting HTTP/2 POST https://localhost:7150/HelloGreeting/PostGreeting?lastName=name - 0 
+2025-03-04 11:57:02.9946 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication)' 
+2025-03-04 11:57:02.9946 [Info] Route matched with {action = "PostGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PostGreeting(System.String, System.String) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 11:57:02.9946 [Info] Logger has been integrated 
+2025-03-04 11:57:02.9946 [Info] User has been greeted 
+2025-03-04 11:57:02.9946 [Info] Greeting Message: Hello name 
+2025-03-04 11:57:02.9946 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-04 11:57:02.9946 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication) in 3.0211ms 
+2025-03-04 11:57:02.9946 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication)' 
+2025-03-04 11:57:02.9946 [Info] Request finished HTTP/2 POST https://localhost:7150/HelloGreeting/PostGreeting?lastName=name - 0 - 200 - application/json;+charset=utf-8 11.1409ms 
+2025-03-04 11:57:08.0409 [Info] Request starting HTTP/2 POST https://localhost:7150/HelloGreeting/PostGreeting - 0 
+2025-03-04 11:57:08.0409 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication)' 
+2025-03-04 11:57:08.0549 [Info] Route matched with {action = "PostGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PostGreeting(System.String, System.String) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 11:57:08.0549 [Info] Logger has been integrated 
+2025-03-04 11:57:08.0549 [Info] User has been greeted 
+2025-03-04 11:57:08.0549 [Info] Greeting Message: Hello World 
+2025-03-04 11:57:08.0549 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-04 11:57:08.0549 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication) in 12.6312ms 
+2025-03-04 11:57:08.0549 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication)' 
+2025-03-04 11:57:08.0549 [Info] Request finished HTTP/2 POST https://localhost:7150/HelloGreeting/PostGreeting - 0 - 200 - application/json;+charset=utf-8 22.7093ms 
+2025-03-04 11:57:13.5547 [Info] Request starting HTTP/2 POST https://localhost:7150/HelloGreeting/PostGreeting?firstName=ya - 0 
+2025-03-04 11:57:13.5547 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication)' 
+2025-03-04 11:57:13.5547 [Info] Route matched with {action = "PostGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PostGreeting(System.String, System.String) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 11:57:13.5547 [Info] Logger has been integrated 
+2025-03-04 11:57:13.5547 [Info] User has been greeted 
+2025-03-04 11:57:13.5547 [Info] Greeting Message: Hello ya 
+2025-03-04 11:57:13.5547 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-04 11:57:13.5547 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication) in 5.3603ms 
+2025-03-04 11:57:13.5547 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication)' 
+2025-03-04 11:57:13.5547 [Info] Request finished HTTP/2 POST https://localhost:7150/HelloGreeting/PostGreeting?firstName=ya - 0 - 200 - application/json;+charset=utf-8 7.5594ms 
+2025-03-04 12:34:02.1676 [Info] Now listening on: https://localhost:7150 
+2025-03-04 12:34:02.1880 [Info] Now listening on: http://localhost:5143 
+2025-03-04 12:34:02.2385 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-04 12:34:02.2385 [Info] Hosting environment: Development 
+2025-03-04 12:34:02.2385 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-04 12:34:03.1723 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-04 12:34:03.6041 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 442.9509ms 
+2025-03-04 12:34:03.7514 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-04 12:34:03.7514 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-04 12:34:03.7868 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-04 12:34:03.7931 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 41.6654ms 
+2025-03-04 12:34:03.7931 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 46.6287ms 
+2025-03-04 12:34:03.9687 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 181.7625ms 
+2025-03-04 12:34:04.0960 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-04 12:34:04.1016 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 18.3565ms 
+2025-03-04 12:34:13.0402 [Info] Request starting HTTP/2 POST https://localhost:7150/HelloGreeting/PostGreeting application/json 51 
+2025-03-04 12:34:13.0578 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication)' 
+2025-03-04 12:34:13.0956 [Info] Route matched with {action = "PostGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PostGreeting(ModelLayer.Model.UserGreetModel) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 12:34:13.1024 [Info] Logger has been integrated 
+2025-03-04 12:34:13.1323 [Info] Generated Greeting: Hello Sir/Mam string string 
+2025-03-04 12:34:13.1323 [Info] User has been greeted 
+2025-03-04 12:34:13.1488 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-04 12:34:13.1488 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication) in 53.3942ms 
+2025-03-04 12:34:13.1488 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.PostGreeting (HelloGreetingApplication)' 
+2025-03-04 12:34:13.1488 [Info] Request finished HTTP/2 POST https://localhost:7150/HelloGreeting/PostGreeting application/json 51 - 200 - application/json;+charset=utf-8 109.1110ms 

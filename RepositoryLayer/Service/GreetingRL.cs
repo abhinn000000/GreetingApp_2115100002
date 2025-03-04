@@ -30,6 +30,20 @@ namespace RepositoryLayer.Services
             _context.SaveChanges();
             return true;
         }
+        public GreetingModel GetGreetingById(int ID)
+        {
+            var entity = _context.GreetMessages.FirstOrDefault(g => g.Id == ID);
+
+            if (entity != null)
+            {
+                return new GreetingModel()
+                {
+                    Id = entity.Id,
+                    GreetingMessage = entity.Greeting
+                };
+            }
+            return null;
+        }
 
         public string Greeting(UserGreetModel usergreet)
         {

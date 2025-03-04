@@ -592,3 +592,61 @@ FROM [GreetMessages] AS [g]
 2025-03-04 23:34:56.8381 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication) in 49.3382ms 
 2025-03-04 23:34:56.8381 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication)' 
 2025-03-04 23:34:56.8381 [Info] Request finished HTTP/2 GET https://localhost:7150/HelloGreeting/GetAllGreetings - - - 200 - application/json;+charset=utf-8 61.5044ms 
+2025-03-04 23:46:49.3893 [Info] Now listening on: https://localhost:7150 
+2025-03-04 23:46:49.4514 [Info] Now listening on: http://localhost:5143 
+2025-03-04 23:46:49.6489 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-04 23:46:49.6489 [Info] Hosting environment: Development 
+2025-03-04 23:46:49.6682 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-04 23:46:51.2116 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-04 23:46:51.9283 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 717.0708ms 
+2025-03-04 23:46:52.0850 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-04 23:46:52.2873 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-04 23:46:52.2956 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 210.5549ms 
+2025-03-04 23:46:52.2956 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 12.5023ms 
+2025-03-04 23:46:52.3090 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-04 23:46:52.7607 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 451.6452ms 
+2025-03-04 23:46:52.8929 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-04 23:46:52.9099 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 17.0153ms 
+2025-03-04 23:47:04.2422 [Info] Request starting HTTP/2 DELETE https://localhost:7150/HelloGreeting/DeleteGreeting/18 - - 
+2025-03-04 23:47:04.2601 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication)' 
+2025-03-04 23:47:04.2881 [Info] Route matched with {action = "DeleteGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteGreeting(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 23:47:04.5166 [Info] Logger has been integrated 
+2025-03-04 23:47:05.2145 [Info] Entity Framework Core 6.0.36 initialized 'GreetingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-04 23:47:06.2210 [Info] Executed DbCommand (110ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[Greeting]
+FROM [GreetMessages] AS [g]
+WHERE [g].[Id] = @__id_0 
+2025-03-04 23:47:08.9156 [Info] Executing NotFoundObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-04 23:47:08.9156 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication) in 4632.2941ms 
+2025-03-04 23:47:08.9156 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication)' 
+2025-03-04 23:47:08.9311 [Info] Request finished HTTP/2 DELETE https://localhost:7150/HelloGreeting/DeleteGreeting/18 - - - 404 - application/json;+charset=utf-8 4694.8617ms 
+2025-03-04 23:47:16.0395 [Info] Request starting HTTP/2 DELETE https://localhost:7150/HelloGreeting/DeleteGreeting/1 - - 
+2025-03-04 23:47:16.0551 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication)' 
+2025-03-04 23:47:16.0551 [Info] Route matched with {action = "DeleteGreeting", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteGreeting(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 23:47:16.0551 [Info] Logger has been integrated 
+2025-03-04 23:47:16.0551 [Info] Entity Framework Core 6.0.36 initialized 'GreetingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-04 23:47:16.0769 [Info] Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[Greeting]
+FROM [GreetMessages] AS [g]
+WHERE [g].[Id] = @__id_0 
+2025-03-04 23:47:16.2554 [Info] Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [GreetMessages]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT; 
+2025-03-04 23:47:16.2763 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-04 23:47:16.2763 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication) in 223.0065ms 
+2025-03-04 23:47:16.2763 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.DeleteGreeting (HelloGreetingApplication)' 
+2025-03-04 23:47:16.2763 [Info] Request finished HTTP/2 DELETE https://localhost:7150/HelloGreeting/DeleteGreeting/1 - - - 200 - application/json;+charset=utf-8 239.3018ms 
+2025-03-04 23:47:31.8093 [Info] Request starting HTTP/2 GET https://localhost:7150/HelloGreeting/GetAllGreetings - - 
+2025-03-04 23:47:31.8201 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication)' 
+2025-03-04 23:47:31.8201 [Info] Route matched with {action = "GetAllGreetings", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllGreetings() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 23:47:31.8201 [Info] Logger has been integrated 
+2025-03-04 23:47:31.8698 [Info] Entity Framework Core 6.0.36 initialized 'GreetingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-04 23:47:31.8851 [Info] Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [g].[Id], [g].[Greeting]
+FROM [GreetMessages] AS [g] 
+2025-03-04 23:47:31.8851 [Info] Executing NotFoundObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.Collections.Generic.List`1[[ModelLayer.Model.GreetingModel, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-04 23:47:31.8851 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication) in 62.6321ms 
+2025-03-04 23:47:31.8851 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication)' 
+2025-03-04 23:47:31.8851 [Info] Request finished HTTP/2 GET https://localhost:7150/HelloGreeting/GetAllGreetings - - - 404 - application/json;+charset=utf-8 76.8659ms 

@@ -520,3 +520,30 @@ WHERE [g].[Id] = @__ID_0
 2025-03-04 23:04:17.9052 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication) in 92.2435ms 
 2025-03-04 23:04:17.9052 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication)' 
 2025-03-04 23:04:17.9052 [Info] Request finished HTTP/2 GET https://localhost:7150/HelloGreeting/GetGreetingById/1 - - - 200 - application/json;+charset=utf-8 103.4313ms 
+2025-03-04 23:19:43.3560 [Info] Now listening on: https://localhost:7150 
+2025-03-04 23:19:43.3812 [Info] Now listening on: http://localhost:5143 
+2025-03-04 23:19:43.4365 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-04 23:19:43.4365 [Info] Hosting environment: Development 
+2025-03-04 23:19:43.4365 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-04 23:19:44.8767 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-04 23:19:45.4669 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 593.5562ms 
+2025-03-04 23:19:45.5359 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-04 23:19:45.5359 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-04 23:19:45.5420 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 5.9641ms 
+2025-03-04 23:19:45.5420 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 11.6998ms 
+2025-03-04 23:19:45.5593 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-04 23:19:45.8188 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 259.5920ms 
+2025-03-04 23:19:46.1401 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-04 23:19:46.1672 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 27.0451ms 
+2025-03-04 23:19:54.0904 [Info] Request starting HTTP/2 GET https://localhost:7150/HelloGreeting/GetAllGreetings - - 
+2025-03-04 23:19:54.1021 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication)' 
+2025-03-04 23:19:54.1235 [Info] Route matched with {action = "GetAllGreetings", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllGreetings() on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-04 23:19:54.3552 [Info] Logger has been integrated 
+2025-03-04 23:19:54.9281 [Info] Entity Framework Core 6.0.36 initialized 'GreetingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-04 23:19:55.7075 [Info] Executed DbCommand (73ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [g].[Id], [g].[Greeting]
+FROM [GreetMessages] AS [g] 
+2025-03-04 23:19:55.8212 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.Collections.Generic.List`1[[ModelLayer.Model.GreetingModel, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-04 23:19:55.8370 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication) in 1708.4123ms 
+2025-03-04 23:19:55.8370 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetAllGreetings (HelloGreetingApplication)' 
+2025-03-04 23:19:55.8370 [Info] Request finished HTTP/2 GET https://localhost:7150/HelloGreeting/GetAllGreetings - - - 200 - application/json;+charset=utf-8 1755.5797ms 

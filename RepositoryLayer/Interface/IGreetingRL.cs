@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ModelLayer.Model;
+using RepositoryLayer.Entity;
 
 namespace RepositoryLayer.Interface
 {
@@ -14,5 +15,7 @@ namespace RepositoryLayer.Interface
         public bool GreetMessage(GreetingModel greetModel);
 
         public GreetingModel GetGreetingById(int ID);
+
+        public List<GreetingEntity> GetAllGreetings();
     }
 }

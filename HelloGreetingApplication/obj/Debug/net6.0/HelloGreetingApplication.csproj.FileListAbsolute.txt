@@ -48,7 +48,6 @@ C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplica
 C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.AssemblyInfoInputs.cache
 C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.AssemblyInfo.cs
 C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.csproj.CoreCompileInputs.cache
-C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.sourcelink.json
 C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.dll

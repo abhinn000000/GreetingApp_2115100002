@@ -1,6 +1,11 @@
 using NLog.Web;
 using NLog;
 using NLog.Config;
+using BusinessLayer.Interface;
+using BusinessLayer.Services;
+using RepositoryLayer.Services;
+using RepositoryLayer.Interface;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +14,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IGreetingBL, GreetingBL>();
+builder.Services.AddScoped<IGreetingRL, GreetingRL>();
+
 
 //logger using NLog
 var logger = LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();

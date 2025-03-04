@@ -1,13 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BusinessLayer.Interface;
+﻿using BusinessLayer.Interface;
+using ModelLayer.Model;
+using NLog;
+using RepositoryLayer.Interface;
+using System;
 
-namespace BusinessLayer.Service
+namespace BusinessLayer.Services
 {
-    internal class GreetingBL : IGreetingBL
+    public class GreetingBL : IGreetingBL
     {
+        private readonly IGreetingRL _greetingRL;
+        private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
+
+        public GreetingBL(IGreetingRL greetingRL)
+        {
+            _greetingRL = greetingRL;
+        }
+
+        public string greet() {
+            return "Hello, World!!";
+        }
+
+        public string UserGreet(UserGreetModel usergreet) {
+            return _greetingRL.Greeting(usergreet);
+        }
     }
 }

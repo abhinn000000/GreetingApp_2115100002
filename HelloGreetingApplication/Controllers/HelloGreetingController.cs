@@ -116,6 +116,23 @@ namespace HelloGreetingApplication.Controllers
 
                 return Ok(responseModel);
             }
-            
+
+        [HttpPost("greetmessage")]
+
+        public IActionResult GreetMessage(GreetingModel greetModel)
+        {
+            var response = new ResponseModel<string>();
+            bool isMessageGrret = _greetingBL.GreetMessage(greetModel);
+            if (isMessageGrret)
+            {
+                response.Success = true;
+                response.Message = "Greet Message!";
+                response.Data = greetModel.ToString();
+                return Ok(response);
+            }
+            response.Success = false;
+            response.Message = "Greet Message Already Exist.";
+            return Conflict(response);
+        }
     }
 }

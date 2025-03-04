@@ -5,9 +5,15 @@ using BusinessLayer.Interface;
 using BusinessLayer.Services;
 using RepositoryLayer.Services;
 using RepositoryLayer.Interface;
+using RepositoryLayer.Context;
+using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+//database connectivity
+var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
+builder.Services.AddDbContext<GreetingContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 
@@ -28,11 +34,11 @@ builder.Logging.ClearProviders();
 builder.Host.UseNLog();
 var app = builder.Build();
 
-    //logger dependency injection
 
-    //Add swagger to container
 
-    app.UseSwagger();
+//Add swagger to container
+
+app.UseSwagger();
     app.UseSwaggerUI();
 
 

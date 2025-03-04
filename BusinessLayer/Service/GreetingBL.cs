@@ -16,12 +16,18 @@ namespace BusinessLayer.Services
             _greetingRL = greetingRL;
         }
 
-        public string greet() {
+        public string greet()
+        {
             return "Hello, World!!";
         }
 
-        public string UserGreet(UserGreetModel usergreet) {
+        public string UserGreet(UserGreetModel usergreet)
+        {
             return _greetingRL.Greeting(usergreet);
+        }
+        public bool GreetMessage(GreetingModel greetModel)
+        {
+            return _greetingRL.GreetMessage(greetModel);
         }
     }
 }

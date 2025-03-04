@@ -14,16 +14,18 @@ namespace HelloGreetingApplication.Controllers
     public class HelloGreetingController : ControllerBase
     {
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
-        private  readonly IGreetingBL _greetingBL; 
+        private readonly IGreetingBL _greetingBL;
 
-        public HelloGreetingController(IGreetingBL greetingBL) {
+        public HelloGreetingController(IGreetingBL greetingBL)
+        {
             _greetingBL = greetingBL;
             _logger.Info("Logger has been integrated");
 
         }
 
         [HttpGet]
-        public IActionResult Get() {
+        public IActionResult Get()
+        {
             /// <summary>
             /// Method to Get the response from server 
             /// </summary>
@@ -33,7 +35,7 @@ namespace HelloGreetingApplication.Controllers
             responseModel.Message = "Hello to Greeting App API Endpoint";
             responseModel.Data = "Hello world";
             return Ok(responseModel);
-            
+
         }
 
         [HttpPost]
@@ -79,7 +81,7 @@ namespace HelloGreetingApplication.Controllers
             return Ok(responseModel);
         }
 
-        [HttpDelete]    
+        [HttpDelete]
         public IActionResult Delete(RequestModel requestModel)
         {
             /// <summary>
@@ -95,7 +97,8 @@ namespace HelloGreetingApplication.Controllers
 
         [HttpGet]
         [Route("HelloWorld")]
-        public string GetHello() {
+        public string GetHello()
+        {
             return _greetingBL.greet();
         }
 
@@ -107,15 +110,15 @@ namespace HelloGreetingApplication.Controllers
             /// method to greet the user with first name,last name or both
             /// </summary>
             var result = _greetingBL.UserGreet(usergreet);
-                ResponseModel<string> responseModel = new ResponseModel<string>();
-                responseModel.Success = true;
-                responseModel.Message = "Greeting Generated Successfully";
-                responseModel.Data = result;
-                
-                _logger.Info("User has been greeted");
+            ResponseModel<string> responseModel = new ResponseModel<string>();
+            responseModel.Success = true;
+            responseModel.Message = "Greeting Generated Successfully";
+            responseModel.Data = result;
 
-                return Ok(responseModel);
-            }
+            _logger.Info("User has been greeted");
+
+            return Ok(responseModel);
+        }
 
         [HttpPost("greetmessage")]
 
@@ -133,6 +136,32 @@ namespace HelloGreetingApplication.Controllers
             response.Success = false;
             response.Message = "Greet Message Already Exist.";
             return Conflict(response);
+        }
+
+        [HttpGet("GetGreetingById/{id}")]
+        public IActionResult GetGreetingById(int id)
+        {
+            var response = new ResponseModel<GreetingModel>();
+            try
+            {
+                var result = _greetingBL.GetGreetingById(id);
+                if (result != null)
+                {
+                    response.Success = true;
+                    response.Message = "Greeting Message Found";
+                    response.Data = result;
+                    return Ok(response);
+                }
+                response.Success = false;
+                response.Message = "Greeting Message Not Found";
+                return NotFound(response);
+            }
+            catch (Exception ex)
+            {
+                response.Success = false;
+                response.Message = $"An error occurred: {ex.Message}";
+                return StatusCode(500, response);
+            }
         }
     }
 }

@@ -1847,3 +1847,178 @@ WHERE [u].[Email] = @__email_0
 2025-03-08 11:58:07.8860 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 19.6302ms 
 2025-03-08 11:58:07.8860 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
 2025-03-08 11:58:07.8860 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 50 - 401 - application/json;+charset=utf-8 22.4376ms 
+2025-03-08 15:06:49.0200 [Info] User profile is available. Using 'C:\Users\Lenovo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2025-03-08 15:06:50.0578 [Info] Now listening on: https://localhost:7150 
+2025-03-08 15:06:50.0578 [Info] Now listening on: http://localhost:5143 
+2025-03-08 15:06:50.3859 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-08 15:06:50.3859 [Info] Hosting environment: Development 
+2025-03-08 15:06:50.3859 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-08 15:06:51.7800 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-08 15:06:52.4321 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 663.0512ms 
+2025-03-08 15:06:52.7271 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-08 15:06:52.7271 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-08 15:06:52.7655 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 38.4054ms 
+2025-03-08 15:06:52.7773 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-08 15:06:52.7773 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 54.5527ms 
+2025-03-08 15:06:52.9291 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 151.7160ms 
+2025-03-08 15:06:53.1448 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-08 15:06:53.1630 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 18.4062ms 
+2025-03-08 15:07:10.1515 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-08 15:07:10.1815 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 15:07:10.2127 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 15:07:10.4336 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 216.4114ms 
+2025-03-08 15:07:10.4336 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 15:07:10.4336 [Error] An unhandled exception has occurred while executing the request. System.InvalidOperationException: Unable to resolve service for type 'UserRegistrationSystem.Helper.JwtTokenHelper' while attempting to activate 'HelloGreetingApplication.Controllers.UserController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method3(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-03-08 15:07:10.4813 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 500 - text/plain;+charset=utf-8 322.5177ms 
+2025-03-08 16:04:46.3480 [Info] User profile is available. Using 'C:\Users\Lenovo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2025-03-08 16:04:47.3662 [Info] Now listening on: https://localhost:7150 
+2025-03-08 16:04:47.3662 [Info] Now listening on: http://localhost:5143 
+2025-03-08 16:04:47.4584 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-08 16:04:47.4584 [Info] Hosting environment: Development 
+2025-03-08 16:04:47.4584 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-08 16:04:48.7230 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-08 16:04:49.7706 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 1050.6465ms 
+2025-03-08 16:04:49.8311 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-08 16:04:49.8311 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-08 16:04:49.8681 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 27.4944ms 
+2025-03-08 16:04:49.8681 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-08 16:04:49.8755 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 44.4042ms 
+2025-03-08 16:04:50.0009 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 132.5062ms 
+2025-03-08 16:04:50.2719 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-08 16:04:50.2993 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 27.3175ms 
+2025-03-08 16:05:04.8632 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-08 16:05:04.8719 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 16:05:04.9048 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 16:05:05.1698 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 260.472ms 
+2025-03-08 16:05:05.1698 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 16:05:05.1698 [Error] An unhandled exception has occurred while executing the request. System.InvalidOperationException: Unable to resolve service for type 'UserRegistrationSystem.Helper.JwtTokenHelper' while attempting to activate 'HelloGreetingApplication.Controllers.UserController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method3(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-03-08 16:05:05.2262 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 500 - text/plain;+charset=utf-8 358.8540ms 
+2025-03-08 16:05:40.4665 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-08 16:05:40.4665 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 16:05:40.4665 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 16:05:40.4893 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 14.9145ms 
+2025-03-08 16:05:40.4893 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 16:05:40.4893 [Error] An unhandled exception has occurred while executing the request. System.InvalidOperationException: Unable to resolve service for type 'UserRegistrationSystem.Helper.JwtTokenHelper' while attempting to activate 'HelloGreetingApplication.Controllers.UserController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method3(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-03-08 16:05:40.4946 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 500 - text/plain;+charset=utf-8 27.2223ms 
+2025-03-08 16:10:44.1500 [Info] User profile is available. Using 'C:\Users\Lenovo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2025-03-08 16:10:44.9472 [Info] Now listening on: https://localhost:7150 
+2025-03-08 16:10:44.9482 [Info] Now listening on: http://localhost:5143 
+2025-03-08 16:10:45.0087 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-08 16:10:45.0087 [Info] Hosting environment: Development 
+2025-03-08 16:10:45.0097 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-08 16:10:45.7756 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-08 16:10:46.1932 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 417.8692ms 
+2025-03-08 16:10:46.2303 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-08 16:10:46.2303 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-08 16:10:46.2303 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 9.1501ms 
+2025-03-08 16:10:46.2508 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 20.4157ms 
+2025-03-08 16:10:46.2688 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-08 16:10:46.3525 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 83.8825ms 
+2025-03-08 16:10:46.5901 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-08 16:10:46.6196 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 29.5167ms 
+2025-03-08 16:11:02.3332 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-08 16:11:02.3461 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 16:11:02.3830 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 16:11:02.5977 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 209.7912ms 
+2025-03-08 16:11:02.5977 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 16:11:02.5977 [Error] An unhandled exception has occurred while executing the request. System.InvalidOperationException: Unable to resolve service for type 'HelloGreeting.Helper.JwtTokenHelper' while attempting to activate 'HelloGreetingApplication.Controllers.UserController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method3(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-03-08 16:11:02.6519 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 500 - text/plain;+charset=utf-8 314.8795ms 
+2025-03-08 16:13:36.3905 [Info] User profile is available. Using 'C:\Users\Lenovo\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest. 
+2025-03-08 16:13:37.0405 [Info] Now listening on: https://localhost:7150 
+2025-03-08 16:13:37.0417 [Info] Now listening on: http://localhost:5143 
+2025-03-08 16:13:37.1220 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-08 16:13:37.1220 [Info] Hosting environment: Development 
+2025-03-08 16:13:37.1220 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-08 16:13:37.8022 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-08 16:13:38.3113 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 511.9859ms 
+2025-03-08 16:13:38.3645 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-08 16:13:38.3645 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-08 16:13:38.3699 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 10.4225ms 
+2025-03-08 16:13:38.3699 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 12.3175ms 
+2025-03-08 16:13:38.3699 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-08 16:13:38.5425 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 160.3927ms 
+2025-03-08 16:13:38.7267 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-08 16:13:38.7651 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 38.4406ms 
+2025-03-08 16:13:52.8253 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-08 16:13:52.8434 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 16:13:52.8838 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 16:13:53.1239 [Info] User Controller initialized successfully 
+2025-03-08 16:13:53.1695 [Info] Login attempt for user: Vedant 
+2025-03-08 16:13:53.6830 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 16:13:54.6542 [Info] Executed DbCommand (86ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 16:13:54.8844 [Info] User Vedant logged in successfully. 
+2025-03-08 16:13:54.8868 [Info] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 16:13:54.8868 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 2004.6234ms 
+2025-03-08 16:13:54.8868 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 16:13:54.9060 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 200 - application/json;+charset=utf-8 2078.6982ms 

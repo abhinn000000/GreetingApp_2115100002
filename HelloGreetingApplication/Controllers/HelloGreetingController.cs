@@ -4,7 +4,7 @@ using ModelLayer.Model;
 using NLog;
 using BusinessLayer.Interface;
 using Middleware.GlobalExceptionHandler;
-using Middleware.GlobalExceptionHandler;
+using HelloGreeting.Helper;
 
 namespace HelloGreetingApplication.Controllers
 

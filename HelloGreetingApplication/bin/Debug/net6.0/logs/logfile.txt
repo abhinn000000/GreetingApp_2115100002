@@ -863,3 +863,987 @@ WHERE [g].[Id] = @__ID_0
 2025-03-07 11:35:34.7903 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication) in 10.4472ms 
 2025-03-07 11:35:34.7903 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication)' 
 2025-03-07 11:35:34.7903 [Info] Request finished HTTP/2 GET https://localhost:7150/HelloGreeting/GetGreetingById/2 - - - 200 - application/json;+charset=utf-8 14.5263ms 
+2025-03-07 21:14:35.0659 [Info] Now listening on: https://localhost:7150 
+2025-03-07 21:14:35.1063 [Info] Now listening on: http://localhost:5143 
+2025-03-07 21:14:35.2377 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-07 21:14:35.2377 [Info] Hosting environment: Development 
+2025-03-07 21:14:35.2377 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-07 21:14:36.4829 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-07 21:14:37.2426 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-07 21:14:37.2426 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-07 21:14:37.4030 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-07 21:14:37.4485 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 205.0849ms 
+2025-03-07 21:14:37.4485 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 977.3571ms 
+2025-03-07 21:14:37.4485 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 206.5452ms 
+2025-03-07 21:14:37.8046 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 401.5474ms 
+2025-03-07 21:14:37.9238 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-07 21:14:37.9734 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 49.8190ms 
+2025-03-07 21:14:53.1364 [Info] Request starting HTTP/2 GET https://localhost:7150/HelloGreeting/GetGreetingById/2 - - 
+2025-03-07 21:14:53.1518 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication)' 
+2025-03-07 21:14:53.1862 [Info] Route matched with {action = "GetGreetingById", controller = "HelloGreeting"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetGreetingById(Int32) on controller HelloGreetingApplication.Controllers.HelloGreetingController (HelloGreetingApplication). 
+2025-03-07 21:14:53.4398 [Info] Logger has been integrated 
+2025-03-07 21:14:53.9843 [Info] Entity Framework Core 6.0.36 initialized 'GreetingContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 21:14:54.9237 [Info] Executed DbCommand (108ms) [Parameters=[@__ID_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [g].[Id], [g].[Greeting]
+FROM [GreetMessages] AS [g]
+WHERE [g].[Id] = @__ID_0 
+2025-03-07 21:14:54.9953 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[ModelLayer.Model.GreetingModel, ModelLayer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2025-03-07 21:14:55.0127 [Info] Executed action HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication) in 1819.2272ms 
+2025-03-07 21:14:55.0127 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.HelloGreetingController.GetGreetingById (HelloGreetingApplication)' 
+2025-03-07 21:14:55.0280 [Info] Request finished HTTP/2 GET https://localhost:7150/HelloGreeting/GetGreetingById/2 - - - 200 - application/json;+charset=utf-8 1890.1241ms 
+2025-03-07 21:53:11.0993 [Info] Entity Framework Core 6.0.36 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 21:54:04.1369 [Info] Entity Framework Core 6.0.36 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 21:54:04.5592 [Info] Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2025-03-07 21:54:04.5810 [Info] Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2025-03-07 21:54:04.5810 [Info] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2025-03-07 21:54:04.5810 [Info] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2025-03-07 21:54:04.8959 [Info] Executed DbCommand (43ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2025-03-07 21:54:04.8989 [Info] Applying migration '20250307162311_UserUpdateTable'. 
+2025-03-07 21:54:04.9799 [Info] Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [FirstName] nvarchar(max) NOT NULL,
+    [LastName] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+); 
+2025-03-07 21:54:04.9799 [Info] Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250307162311_UserUpdateTable', N'6.0.36'); 
+2025-03-07 21:54:23.0871 [Info] Now listening on: https://localhost:7150 
+2025-03-07 21:54:23.1136 [Info] Now listening on: http://localhost:5143 
+2025-03-07 21:54:23.1707 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-07 21:54:23.1707 [Info] Hosting environment: Development 
+2025-03-07 21:54:23.1707 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-07 21:54:24.3189 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-07 21:54:24.7855 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 469.2254ms 
+2025-03-07 21:54:24.7855 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-07 21:54:24.8770 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-07 21:54:24.9397 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 151.1226ms 
+2025-03-07 21:54:24.9397 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 62.7891ms 
+2025-03-07 21:54:24.9525 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-07 21:54:25.1011 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 163.1017ms 
+2025-03-07 21:54:25.3223 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-07 21:54:25.3764 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 54.1388ms 
+2025-03-07 21:54:53.8871 [Info] Request starting HTTP/2 POST https://localhost:7150/api/User/register application/json 99 
+2025-03-07 21:54:53.9013 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' 
+2025-03-07 21:54:53.9360 [Info] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 21:54:54.0086 [Info] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 21:54:54.0086 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 79.6766ms 
+2025-03-07 21:54:54.0086 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' 
+2025-03-07 21:54:54.0086 [Info] Request finished HTTP/2 POST https://localhost:7150/api/User/register application/json 99 - 200 - application/json;+charset=utf-8 132.4783ms 
+2025-03-07 21:55:07.5744 [Info] Request starting HTTP/2 POST https://localhost:7150/api/User/login application/json 49 
+2025-03-07 21:55:07.5744 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 21:55:07.5744 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 21:55:07.5859 [Info] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 21:55:07.5859 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 8.69ms 
+2025-03-07 21:55:07.5859 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 21:55:07.5859 [Info] Request finished HTTP/2 POST https://localhost:7150/api/User/login application/json 49 - 401 - application/json;+charset=utf-8 13.8403ms 
+2025-03-07 22:11:34.8445 [Info] Entity Framework Core 6.0.36 initialized 'UserData' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:11:48.8418 [Info] Entity Framework Core 6.0.36 initialized 'UserData' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:12:26.5828 [Info] Entity Framework Core 6.0.36 initialized 'UserData' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:12:27.0515 [Info] Executed DbCommand (125ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [UserAPI]; 
+2025-03-07 22:12:27.0973 [Info] Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [UserAPI] SET READ_COMMITTED_SNAPSHOT ON;
+END; 
+2025-03-07 22:12:27.1066 [Info] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2025-03-07 22:12:27.1873 [Info] Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+); 
+2025-03-07 22:12:27.3415 [Info] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2025-03-07 22:12:27.3600 [Info] Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2025-03-07 22:12:27.3695 [Info] Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2025-03-07 22:12:27.3695 [Info] Applying migration '20250307162311_UserUpdateTable'. 
+2025-03-07 22:12:29.0129 [Info] Executed DbCommand (1,614ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [FirstName] nvarchar(max) NOT NULL,
+    [LastName] nvarchar(max) NOT NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+); 
+2025-03-07 22:12:29.0129 [Info] Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250307162311_UserUpdateTable', N'6.0.36'); 
+2025-03-07 22:12:29.0129 [Info] Applying migration '20250307164148_User'. 
+2025-03-07 22:12:29.0129 [Info] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250307164148_User', N'6.0.36'); 
+2025-03-07 22:13:09.7734 [Info] Entity Framework Core 6.0.36 initialized 'UserData' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:13:10.4033 [Info] Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2025-03-07 22:13:10.4291 [Info] Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2025-03-07 22:13:10.4328 [Info] Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2025-03-07 22:13:10.4328 [Info] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2025-03-07 22:13:10.5284 [Info] Executed DbCommand (60ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2025-03-07 22:13:10.5424 [Info] No migrations were applied. The database is already up to date. 
+2025-03-07 22:14:35.7565 [Info] Now listening on: https://localhost:7150 
+2025-03-07 22:14:35.7797 [Info] Now listening on: http://localhost:5143 
+2025-03-07 22:14:35.8451 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-07 22:14:35.8451 [Info] Hosting environment: Development 
+2025-03-07 22:14:35.8451 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-07 22:14:37.3977 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-07 22:14:38.0828 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 687.3993ms 
+2025-03-07 22:14:38.2415 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-07 22:14:38.2548 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-07 22:14:38.2548 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-07 22:14:38.2758 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 36.9656ms 
+2025-03-07 22:14:38.2758 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 34.7165ms 
+2025-03-07 22:14:38.5001 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 245.0203ms 
+2025-03-07 22:14:38.8066 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-07 22:14:38.8256 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 18.9774ms 
+2025-03-07 22:14:50.0919 [Info] Request starting HTTP/2 POST https://localhost:7150/api/User/register application/json 96 
+2025-03-07 22:14:50.1188 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' 
+2025-03-07 22:14:50.1542 [Info] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:14:50.2297 [Info] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:14:50.2297 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 80.1337ms 
+2025-03-07 22:14:50.2297 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' 
+2025-03-07 22:14:50.2297 [Info] Request finished HTTP/2 POST https://localhost:7150/api/User/register application/json 96 - 200 - application/json;+charset=utf-8 139.4561ms 
+2025-03-07 22:49:33.6101 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:49:33.9038 [Info] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2025-03-07 22:49:33.9361 [Info] Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2025-03-07 22:49:33.9361 [Info] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2025-03-07 22:49:33.9361 [Info] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2025-03-07 22:49:34.2014 [Info] Executed DbCommand (242ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2025-03-07 22:49:34.2152 [Info] No migrations were applied. The database is already up to date. 
+2025-03-07 22:50:25.4403 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:50:50.2970 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:50:50.5214 [Info] Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2025-03-07 22:50:50.5500 [Info] Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2025-03-07 22:50:50.5500 [Info] Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 
+2025-03-07 22:50:50.5500 [Info] Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]'); 
+2025-03-07 22:50:50.6491 [Info] Executed DbCommand (71ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId]; 
+2025-03-07 22:50:50.6509 [Info] Applying migration '20250307172025_Users'. 
+2025-03-07 22:50:50.9995 [Info] Executed DbCommand (309ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Users].[PasswordHash]', N'Password', N'COLUMN'; 
+2025-03-07 22:50:50.9995 [Info] Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Users].[Id]', N'UserId', N'COLUMN'; 
+2025-03-07 22:50:51.0147 [Info] Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250307172025_Users', N'6.0.36'); 
+2025-03-07 22:51:38.8373 [Info] Now listening on: https://localhost:7150 
+2025-03-07 22:51:38.8565 [Info] Now listening on: http://localhost:5143 
+2025-03-07 22:51:38.9220 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-07 22:51:38.9220 [Info] Hosting environment: Development 
+2025-03-07 22:51:38.9220 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-07 22:51:40.0209 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-07 22:51:40.6802 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 661.0901ms 
+2025-03-07 22:51:40.7738 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-07 22:51:40.7738 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-07 22:51:40.7780 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 16.6032ms 
+2025-03-07 22:51:40.7949 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 21.1596ms 
+2025-03-07 22:51:40.8540 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-07 22:51:41.0703 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 216.2834ms 
+2025-03-07 22:51:41.3036 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-07 22:51:41.3738 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 70.1007ms 
+2025-03-07 22:51:58.5105 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Register application/json 97 
+2025-03-07 22:51:58.5277 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' 
+2025-03-07 22:51:58.5621 [Info] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:51:58.7725 [Info] User Controller initialized successfully 
+2025-03-07 22:51:59.3233 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:52:00.1068 [Info] Executed DbCommand (65ms) [Parameters=[@__user_Email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__user_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2025-03-07 22:52:00.3452 [Info] Executed DbCommand (17ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [FirstName], [LastName], [Password])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity(); 
+2025-03-07 22:52:00.3889 [Info] User Registered: string1 
+2025-03-07 22:52:00.3889 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:52:00.4036 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 1834.2634ms 
+2025-03-07 22:52:00.4036 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' 
+2025-03-07 22:52:00.4036 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Register application/json 97 - 200 - application/json;+charset=utf-8 1889.2111ms 
+2025-03-07 22:52:12.9008 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 48 
+2025-03-07 22:52:12.9008 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:52:12.9008 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:52:12.9157 [Info] User Controller initialized successfully 
+2025-03-07 22:52:12.9413 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:52:13.0099 [Info] Executed DbCommand (16ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:52:13.0099 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:52:13.0099 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 108.9716ms 
+2025-03-07 22:52:13.0099 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:52:13.0099 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 48 - 200 - application/json;+charset=utf-8 113.8924ms 
+2025-03-07 22:52:26.4648 [Info] Request starting HTTP/2 POST https://localhost:7150/User/ForgetPassword?email=string1 - 0 
+2025-03-07 22:52:26.4648 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' 
+2025-03-07 22:52:26.4648 [Info] Route matched with {action = "ForgetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ForgetPassword(System.String) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:52:26.4648 [Info] User Controller initialized successfully 
+2025-03-07 22:52:26.5124 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:52:26.5124 [Info] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:52:26.5124 [Info] Reset Password Link Sent to: string1 
+2025-03-07 22:52:26.5124 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:52:26.5257 [Info] Executed action HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication) in 53.6919ms 
+2025-03-07 22:52:26.5257 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ForgetPassword (HelloGreetingApplication)' 
+2025-03-07 22:52:26.5257 [Info] Request finished HTTP/2 POST https://localhost:7150/User/ForgetPassword?email=string1 - 0 - 200 - application/json;+charset=utf-8 61.2070ms 
+2025-03-07 22:53:02.8755 [Info] Request starting HTTP/2 POST https://localhost:7150/User/ResetPassword application/json 74 
+2025-03-07 22:53:02.8755 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.ResetPassword (HelloGreetingApplication)' 
+2025-03-07 22:53:02.8755 [Info] Route matched with {action = "ResetPassword", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ResetPassword(ModelLayer.Model.ResetPasswordModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:53:02.8755 [Info] User Controller initialized successfully 
+2025-03-07 22:53:02.9006 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:53:02.9006 [Info] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:53:03.0623 [Info] Executed DbCommand (8ms) [Parameters=[@p1='?' (DbType = Int32), @p0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Users] SET [Password] = @p0
+WHERE [UserId] = @p1;
+SELECT @@ROWCOUNT; 
+2025-03-07 22:53:03.0623 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:53:03.0623 [Info] Executed action HelloGreetingApplication.Controllers.UserController.ResetPassword (HelloGreetingApplication) in 184.4278ms 
+2025-03-07 22:53:03.0623 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.ResetPassword (HelloGreetingApplication)' 
+2025-03-07 22:53:03.0623 [Info] Request finished HTTP/2 POST https://localhost:7150/User/ResetPassword application/json 74 - 200 - application/json;+charset=utf-8 192.1838ms 
+2025-03-07 22:53:37.8693 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 48 
+2025-03-07 22:53:37.8693 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:53:37.8693 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:53:37.8693 [Info] User Controller initialized successfully 
+2025-03-07 22:53:37.8693 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:53:37.8848 [Info] Executed DbCommand (7ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:53:37.9652 [Info] Executing ObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:53:37.9652 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 92.3254ms 
+2025-03-07 22:53:37.9652 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:53:37.9652 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 48 - 500 - application/json;+charset=utf-8 98.3722ms 
+2025-03-07 22:53:44.6841 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-07 22:53:44.6841 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:53:44.6841 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:53:44.6841 [Info] User Controller initialized successfully 
+2025-03-07 22:53:44.7000 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:53:44.7127 [Info] Executed DbCommand (8ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:53:44.7329 [Info] Executing ObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:53:44.7329 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 44.1611ms 
+2025-03-07 22:53:44.7329 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:53:44.7329 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 500 - application/json;+charset=utf-8 49.6402ms 
+2025-03-07 22:53:50.1735 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-07 22:53:50.1813 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:53:50.1813 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:53:50.1813 [Info] User Controller initialized successfully 
+2025-03-07 22:53:50.1813 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:53:50.1979 [Info] Executed DbCommand (8ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:53:50.2157 [Info] Executing ObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:53:50.2157 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 31.9904ms 
+2025-03-07 22:53:50.2157 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:53:50.2157 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 500 - application/json;+charset=utf-8 41.7098ms 
+2025-03-07 22:54:13.1994 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-07 22:54:13.1994 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:54:13.1994 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:54:13.1994 [Info] User Controller initialized successfully 
+2025-03-07 22:54:13.1994 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:54:13.2174 [Info] Executed DbCommand (6ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:54:13.2359 [Info] Executing ObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:54:13.2359 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 29.4763ms 
+2025-03-07 22:54:13.2359 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:54:13.2359 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 500 - application/json;+charset=utf-8 38.6079ms 
+2025-03-07 22:54:19.2307 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 48 
+2025-03-07 22:54:19.2307 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:54:19.2307 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:54:19.2307 [Info] User Controller initialized successfully 
+2025-03-07 22:54:19.2307 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:54:19.2469 [Info] Executed DbCommand (8ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:54:19.2693 [Info] Executing ObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:54:19.2693 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 33.7985ms 
+2025-03-07 22:54:19.2693 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:54:19.2693 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 48 - 500 - application/json;+charset=utf-8 35.6004ms 
+2025-03-07 22:54:29.2180 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 48 
+2025-03-07 22:54:29.2180 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:54:29.2180 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:54:29.2180 [Info] User Controller initialized successfully 
+2025-03-07 22:54:29.2281 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:54:29.2281 [Info] Executed DbCommand (9ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:54:29.2601 [Info] Executing ObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:54:29.2601 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 33.8493ms 
+2025-03-07 22:54:29.2601 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:54:29.2601 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 48 - 500 - application/json;+charset=utf-8 37.8692ms 
+2025-03-07 22:54:35.4428 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-07 22:54:35.4428 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:54:35.4428 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:54:35.4466 [Info] User Controller initialized successfully 
+2025-03-07 22:54:35.4466 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:54:35.4663 [Info] Executed DbCommand (14ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:54:35.4847 [Info] Executing ObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:54:35.4847 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 37.9426ms 
+2025-03-07 22:54:35.4847 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:54:35.4847 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 500 - application/json;+charset=utf-8 43.1714ms 
+2025-03-07 22:54:42.4784 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-07 22:54:42.4784 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:54:42.4784 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:54:42.4784 [Info] User Controller initialized successfully 
+2025-03-07 22:54:42.4784 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:54:42.4784 [Info] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:54:42.5125 [Info] Executing ObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:54:42.5125 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 26.3136ms 
+2025-03-07 22:54:42.5125 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:54:42.5125 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 500 - application/json;+charset=utf-8 32.0557ms 
+2025-03-07 22:54:46.1243 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-07 22:54:46.1439 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 20.9750ms 
+2025-03-07 22:54:46.2165 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-07 22:54:46.2165 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-07 22:54:46.2165 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 2.1031ms 
+2025-03-07 22:54:46.2165 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 5.5929ms 
+2025-03-07 22:54:46.2165 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-07 22:54:46.2600 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.3718ms 
+2025-03-07 22:54:46.4978 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-07 22:54:46.5097 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 11.6407ms 
+2025-03-07 22:54:46.5097 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/favicon-32x32.png - - 
+2025-03-07 22:54:46.5352 [Info] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2025-03-07 22:54:46.5352 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/favicon-32x32.png - - - 200 628 image/png 16.9357ms 
+2025-03-07 22:54:57.7156 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 48 
+2025-03-07 22:54:57.7156 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:54:57.7156 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:54:57.7156 [Info] User Controller initialized successfully 
+2025-03-07 22:54:57.7156 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:54:57.7332 [Info] Executed DbCommand (7ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:54:57.7518 [Info] Executing ObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:54:57.7518 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 31.2159ms 
+2025-03-07 22:54:57.7518 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:54:57.7518 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 48 - 500 - application/json;+charset=utf-8 36.5590ms 
+2025-03-07 22:55:05.1906 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-07 22:55:05.1906 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:55:05.1906 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:55:05.1906 [Info] User Controller initialized successfully 
+2025-03-07 22:55:05.1975 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:55:05.2131 [Info] Executed DbCommand (9ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:55:05.2309 [Info] Executing ObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:55:05.2309 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 34.8831ms 
+2025-03-07 22:55:05.2309 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:55:05.2309 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 500 - application/json;+charset=utf-8 37.0509ms 
+2025-03-07 22:55:08.2438 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-07 22:55:08.2438 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 6.1242ms 
+2025-03-07 22:55:08.3004 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-07 22:55:08.3004 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 1.9279ms 
+2025-03-07 22:55:08.3004 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-07 22:55:08.3159 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-07 22:55:08.3159 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 1.4038ms 
+2025-03-07 22:55:08.3159 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.7808ms 
+2025-03-07 22:55:08.4027 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-07 22:55:08.4027 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 5.0335ms 
+2025-03-07 22:55:20.4203 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 48 
+2025-03-07 22:55:20.4203 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:55:20.4203 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:55:20.4203 [Info] User Controller initialized successfully 
+2025-03-07 22:55:20.4203 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:55:20.4203 [Info] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:55:20.4203 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:55:20.4316 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 5.4492ms 
+2025-03-07 22:55:20.4316 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:55:20.4316 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 48 - 200 - application/json;+charset=utf-8 10.9492ms 
+2025-03-07 22:58:15.6923 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Register application/json 113 
+2025-03-07 22:58:15.6979 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' 
+2025-03-07 22:58:15.6979 [Info] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:58:15.6979 [Info] User Controller initialized successfully 
+2025-03-07 22:58:15.6979 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:58:15.7131 [Info] Executed DbCommand (5ms) [Parameters=[@__user_Email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__user_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2025-03-07 22:58:15.7131 [Info] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [FirstName], [LastName], [Password])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity(); 
+2025-03-07 22:58:15.7131 [Info] User Registered: abhinn000000@gmail.com 
+2025-03-07 22:58:15.7131 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:58:15.7131 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 20.4358ms 
+2025-03-07 22:58:15.7131 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' 
+2025-03-07 22:58:15.7131 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Register application/json 113 - 200 - application/json;+charset=utf-8 30.4442ms 
+2025-03-07 22:58:28.0760 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 54 
+2025-03-07 22:58:28.0927 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:58:28.0927 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:58:28.0927 [Info] User Controller initialized successfully 
+2025-03-07 22:58:28.0927 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:58:28.1033 [Info] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:58:28.1033 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:58:28.1033 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 11.509ms 
+2025-03-07 22:58:28.1033 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:58:28.1033 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 54 - 200 - application/json;+charset=utf-8 20.3743ms 
+2025-03-07 22:58:48.3166 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 68 
+2025-03-07 22:58:48.3290 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:58:48.3290 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-07 22:58:48.3290 [Info] User Controller initialized successfully 
+2025-03-07 22:58:48.3290 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-07 22:58:48.3417 [Info] Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-07 22:58:48.3417 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-07 22:58:48.3417 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 16.2153ms 
+2025-03-07 22:58:48.3417 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-07 22:58:48.3417 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 68 - 200 - application/json;+charset=utf-8 27.8305ms 
+2025-03-08 11:21:11.8056 [Info] Now listening on: https://localhost:7150 
+2025-03-08 11:21:11.8551 [Info] Now listening on: http://localhost:5143 
+2025-03-08 11:21:11.9299 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-08 11:21:11.9299 [Info] Hosting environment: Development 
+2025-03-08 11:21:11.9299 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-08 11:21:13.3374 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-08 11:21:13.7315 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 404.9058ms 
+2025-03-08 11:21:13.8605 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/swagger-ui.css - - 
+2025-03-08 11:21:13.8605 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-08 11:21:13.8605 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/swagger-ui-standalone-preset.js - - 
+2025-03-08 11:21:13.8605 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-08 11:21:13.8605 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.css - - 
+2025-03-08 11:21:13.8605 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-08 11:21:13.8605 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/swagger-ui-bundle.js - - 
+2025-03-08 11:21:13.8718 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 11.2680ms 
+2025-03-08 11:21:13.8605 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 5.2297ms 
+2025-03-08 11:21:13.8718 [Info] The file /swagger-ui-standalone-preset.js was not modified 
+2025-03-08 11:21:13.8718 [Info] The file /swagger-ui-bundle.js was not modified 
+2025-03-08 11:21:13.8903 [Info] The file /index.css was not modified 
+2025-03-08 11:21:13.8903 [Info] The file /swagger-ui.css was not modified 
+2025-03-08 11:21:13.9008 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/swagger-ui.css - - - 304 - text/css 38.7806ms 
+2025-03-08 11:21:13.9008 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/swagger-ui-bundle.js - - - 304 - application/javascript 38.5010ms 
+2025-03-08 11:21:13.9008 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/swagger-ui-standalone-preset.js - - - 304 - application/javascript 40.7731ms 
+2025-03-08 11:21:13.9197 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.css - - - 304 - text/css 65.5861ms 
+2025-03-08 11:21:14.1912 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 328.2307ms 
+2025-03-08 11:21:14.3020 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-08 11:21:14.3251 [Error] An unhandled exception has occurred while executing the request. Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "POST User/Login" for actions - HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication), HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication). Actions require a unique method/path combination for Swagger/OpenAPI 2.0 and 3.0. Use ConflictingActionsResolver as a workaround or provide your own implementation of PathGroupSelector.
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.PrepareGenerateOperation(IGrouping`2 group)
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperationsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository, Func`3 operationsGenerator)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePathsAsync(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2025-03-08 11:21:14.3251 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 34.5963ms 
+2025-03-08 11:22:02.2302 [Info] Now listening on: https://localhost:7150 
+2025-03-08 11:22:02.2593 [Info] Now listening on: http://localhost:5143 
+2025-03-08 11:22:02.3280 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-08 11:22:02.3280 [Info] Hosting environment: Development 
+2025-03-08 11:22:02.3280 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-08 11:22:03.0803 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger - - 
+2025-03-08 11:22:03.3367 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger - - - 301 0 - 261.6135ms 
+2025-03-08 11:22:03.3492 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-08 11:22:03.4679 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 119.2427ms 
+2025-03-08 11:22:03.4802 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/swagger-ui.css - - 
+2025-03-08 11:22:03.4802 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.css - - 
+2025-03-08 11:22:03.4802 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/swagger-ui-bundle.js - - 
+2025-03-08 11:22:03.4802 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/swagger-ui-standalone-preset.js - - 
+2025-03-08 11:22:03.4802 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-08 11:22:03.4802 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-08 11:22:03.4802 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-08 11:22:03.4802 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 3.3031ms 
+2025-03-08 11:22:03.5007 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 19.5592ms 
+2025-03-08 11:22:03.5007 [Info] Sending file. Request path: '/index.css'. Physical path: 'N/A' 
+2025-03-08 11:22:03.5376 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.css - - - 200 202 text/css 57.1744ms 
+2025-03-08 11:22:03.5529 [Info] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2025-03-08 11:22:03.5529 [Info] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2025-03-08 11:22:03.5778 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/swagger-ui.css - - - 200 154948 text/css 88.6800ms 
+2025-03-08 11:22:03.5778 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/swagger-ui-standalone-preset.js - - - 200 229223 application/javascript 96.5390ms 
+2025-03-08 11:22:03.5918 [Info] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2025-03-08 11:22:03.5918 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/swagger-ui-bundle.js - - - 200 1466324 application/javascript 111.5018ms 
+2025-03-08 11:22:03.6117 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 129.9177ms 
+2025-03-08 11:22:03.7299 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-08 11:22:03.7299 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 8.3889ms 
+2025-03-08 11:22:03.7613 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/favicon-32x32.png - - 
+2025-03-08 11:22:03.7613 [Info] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2025-03-08 11:22:03.7613 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/favicon-32x32.png - - - 200 628 image/png 1.0724ms 
+2025-03-08 11:22:33.3815 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Register application/json 100 
+2025-03-08 11:22:33.4015 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' 
+2025-03-08 11:22:33.4360 [Info] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:22:33.6368 [Info] User Controller initialized successfully 
+2025-03-08 11:22:34.2053 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:22:35.2185 [Info] Executed DbCommand (95ms) [Parameters=[@__user_Email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__user_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2025-03-08 11:22:35.4673 [Info] Executed DbCommand (17ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [FirstName], [LastName], [Password])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity(); 
+2025-03-08 11:22:35.5174 [Info] User Registered: string11 
+2025-03-08 11:22:35.5264 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:22:35.5264 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 2092.8579ms 
+2025-03-08 11:22:35.5264 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' 
+2025-03-08 11:22:35.5457 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Register application/json 100 - 200 - application/json;+charset=utf-8 2164.2368ms 
+2025-03-08 11:23:17.7299 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-08 11:23:17.7447 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:23:17.7603 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:23:17.7603 [Info] User Controller initialized successfully 
+2025-03-08 11:23:17.7603 [Info] Login attempt for user: string11 
+2025-03-08 11:23:17.7603 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:23:17.8083 [Info] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:23:17.8083 [Info] User string11 logged in successfully. 
+2025-03-08 11:23:17.8245 [Info] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:23:17.8245 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 65.1322ms 
+2025-03-08 11:23:17.8245 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:23:17.8245 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 200 - application/json;+charset=utf-8 97.0246ms 
+2025-03-08 11:23:23.5900 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 48 
+2025-03-08 11:23:23.5900 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:23:23.5900 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:23:23.6054 [Info] User Controller initialized successfully 
+2025-03-08 11:23:23.6054 [Info] Login attempt for user: string1 
+2025-03-08 11:23:23.6599 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:23:23.6685 [Info] Executed DbCommand (5ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:23:23.6685 [Warn] Invalid login attempt for user: string1 
+2025-03-08 11:23:23.6685 [Info] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:23:23.6685 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 64.5906ms 
+2025-03-08 11:23:23.6685 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:23:23.6685 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 48 - 401 - application/json;+charset=utf-8 78.7729ms 
+2025-03-08 11:23:30.5411 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-08 11:23:30.5411 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:23:30.5411 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:23:30.5411 [Info] User Controller initialized successfully 
+2025-03-08 11:23:30.5592 [Info] Login attempt for user: string11 
+2025-03-08 11:23:30.5592 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:23:30.5760 [Info] Executed DbCommand (7ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:23:30.5760 [Info] User string11 logged in successfully. 
+2025-03-08 11:23:30.5760 [Info] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:23:30.5760 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 25.3253ms 
+2025-03-08 11:23:30.5760 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:23:30.5760 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 200 - application/json;+charset=utf-8 34.6474ms 
+2025-03-08 11:25:20.9153 [Info] Now listening on: https://localhost:7150 
+2025-03-08 11:25:20.9403 [Info] Now listening on: http://localhost:5143 
+2025-03-08 11:25:20.9972 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-08 11:25:20.9972 [Info] Hosting environment: Development 
+2025-03-08 11:25:20.9972 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-08 11:25:21.6419 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-08 11:25:22.1359 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 506.6026ms 
+2025-03-08 11:25:22.1771 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-08 11:25:22.1771 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-08 11:25:22.1771 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-08 11:25:22.1985 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 26.1033ms 
+2025-03-08 11:25:22.1985 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 26.0648ms 
+2025-03-08 11:25:22.2927 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 115.2254ms 
+2025-03-08 11:25:22.4314 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-08 11:25:22.4775 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 45.9870ms 
+2025-03-08 11:25:40.0736 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 102 
+2025-03-08 11:25:40.0920 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:25:40.1249 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:25:40.3378 [Info] User Controller initialized successfully 
+2025-03-08 11:25:40.3857 [Info] Login attempt for user: string1 
+2025-03-08 11:25:40.9654 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:25:41.8468 [Info] Executed DbCommand (68ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:25:41.9223 [Info] User string1 logged in successfully. 
+2025-03-08 11:25:41.9223 [Info] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:25:41.9332 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 1802.0725ms 
+2025-03-08 11:25:41.9332 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:25:41.9332 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 102 - 200 - application/json;+charset=utf-8 1864.2030ms 
+2025-03-08 11:25:47.2197 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 101 
+2025-03-08 11:25:47.2197 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:25:47.2197 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:25:47.2197 [Info] User Controller initialized successfully 
+2025-03-08 11:25:47.2197 [Info] Login attempt for user: string1 
+2025-03-08 11:25:47.2363 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:25:47.2601 [Info] Executed DbCommand (6ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:25:47.2601 [Warn] Invalid login attempt for user: string1 
+2025-03-08 11:25:47.2601 [Info] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:25:47.2601 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 51.2705ms 
+2025-03-08 11:25:47.2758 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:25:47.2758 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 101 - 401 - application/json;+charset=utf-8 55.3519ms 
+2025-03-08 11:37:16.2178 [Info] Now listening on: https://localhost:7150 
+2025-03-08 11:37:16.2471 [Info] Now listening on: http://localhost:5143 
+2025-03-08 11:37:16.3035 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-08 11:37:16.3035 [Info] Hosting environment: Development 
+2025-03-08 11:37:16.3035 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-08 11:37:17.0201 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-08 11:37:17.6118 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 604.9607ms 
+2025-03-08 11:37:17.6412 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-08 11:37:17.6412 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-08 11:37:17.6412 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-08 11:37:17.6614 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 23.7426ms 
+2025-03-08 11:37:17.6674 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 25.9690ms 
+2025-03-08 11:37:17.7741 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 132.9605ms 
+2025-03-08 11:37:17.8393 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-08 11:37:17.8596 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 20.2605ms 
+2025-03-08 11:37:36.0171 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Register application/json 99 
+2025-03-08 11:37:36.0264 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' 
+2025-03-08 11:37:36.0659 [Info] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:37:36.2783 [Info] User Controller initialized successfully 
+2025-03-08 11:37:36.8450 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:37:37.6887 [Info] Executed DbCommand (91ms) [Parameters=[@__user_Email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__user_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2025-03-08 11:37:38.0169 [Info] Executed DbCommand (88ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [FirstName], [LastName], [Password])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity(); 
+2025-03-08 11:37:38.0832 [Info] User Registered: string112 
+2025-03-08 11:37:38.0899 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:37:38.1082 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 2034.5222ms 
+2025-03-08 11:37:38.1082 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' 
+2025-03-08 11:37:38.1227 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Register application/json 99 - 200 - application/json;+charset=utf-8 2105.5331ms 
+2025-03-08 11:37:51.4481 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 50 
+2025-03-08 11:37:51.4481 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:37:51.4481 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:37:51.4630 [Info] User Controller initialized successfully 
+2025-03-08 11:37:51.4630 [Info] Login attempt for user: string112 
+2025-03-08 11:37:51.4630 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:37:51.5458 [Info] Executed DbCommand (9ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:37:51.6182 [Error] Login failed. System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at BusinessLayer.Services.UserBL.VerifyPassword(String enteredPassword, String storedPassword) in C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\BusinessLayer\Service\UserBL.cs:line 49
+   at BusinessLayer.Services.UserBL.CheckEmailPassword(String email, String password, UserEntity result) in C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\BusinessLayer\Service\UserBL.cs:line 45
+   at HelloGreetingApplication.Controllers.UserController.Login(LoginModel loginModel) in C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\Controllers\UserController.cs:line 80
+2025-03-08 11:37:51.6678 [Info] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:37:51.6678 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 207.4545ms 
+2025-03-08 11:37:51.6678 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:37:51.6678 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 50 - 400 - application/json;+charset=utf-8 215.8111ms 
+2025-03-08 11:38:40.9528 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 92 
+2025-03-08 11:38:40.9655 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:38:40.9655 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:38:40.9655 [Info] User Controller initialized successfully 
+2025-03-08 11:38:40.9655 [Info] Login attempt for user: string112 
+2025-03-08 11:38:41.0019 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:38:41.0114 [Info] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:38:41.0114 [Warn] Invalid login attempt for user: string112 
+2025-03-08 11:38:41.0114 [Info] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:38:41.0114 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 50.5577ms 
+2025-03-08 11:38:41.0114 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:38:41.0114 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 92 - 401 - application/json;+charset=utf-8 62.5342ms 
+2025-03-08 11:39:34.7642 [Info] Now listening on: https://localhost:7150 
+2025-03-08 11:39:34.7909 [Info] Now listening on: http://localhost:5143 
+2025-03-08 11:39:34.8332 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-08 11:39:34.8332 [Info] Hosting environment: Development 
+2025-03-08 11:39:34.8332 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-08 11:39:35.5557 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-08 11:39:36.0609 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-08 11:39:36.0754 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-08 11:39:36.0952 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-08 11:39:36.1317 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 581.6040ms 
+2025-03-08 11:39:36.1317 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 55.6033ms 
+2025-03-08 11:39:36.1490 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 53.8202ms 
+2025-03-08 11:39:36.2654 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 204.5354ms 
+2025-03-08 11:39:36.3319 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-08 11:39:36.3791 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 47.1455ms 
+2025-03-08 11:39:47.6420 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 50 
+2025-03-08 11:39:47.6656 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:39:47.6950 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:39:47.8812 [Info] User Controller initialized successfully 
+2025-03-08 11:39:47.9179 [Info] Login attempt for user: string112 
+2025-03-08 11:39:48.5170 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:39:49.3819 [Info] Executed DbCommand (63ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:39:49.4639 [Info] User string112 logged in successfully. 
+2025-03-08 11:39:49.4639 [Info] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:39:49.4639 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 1773.6844ms 
+2025-03-08 11:39:49.4639 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:39:49.4804 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 50 - 200 - application/json;+charset=utf-8 1836.3840ms 
+2025-03-08 11:39:57.1296 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-08 11:39:57.1347 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:39:57.1347 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:39:57.1347 [Info] User Controller initialized successfully 
+2025-03-08 11:39:57.1347 [Info] Login attempt for user: string12 
+2025-03-08 11:39:57.1347 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:39:57.1513 [Info] Executed DbCommand (7ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:39:57.1513 [Warn] Invalid login attempt for user: string12 
+2025-03-08 11:39:57.1513 [Info] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:39:57.1513 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 25.1094ms 
+2025-03-08 11:39:57.1513 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:39:57.1513 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 401 - application/json;+charset=utf-8 32.6031ms 
+2025-03-08 11:40:02.0600 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 50 
+2025-03-08 11:40:02.0600 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:40:02.0730 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:40:02.0730 [Info] User Controller initialized successfully 
+2025-03-08 11:40:02.0730 [Info] Login attempt for user: string112 
+2025-03-08 11:40:02.1289 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:40:02.1289 [Info] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:40:02.1392 [Info] User string112 logged in successfully. 
+2025-03-08 11:40:02.1392 [Info] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:40:02.1392 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 66.1032ms 
+2025-03-08 11:40:02.1392 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:40:02.1392 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 50 - 200 - application/json;+charset=utf-8 74.5172ms 
+2025-03-08 11:40:48.1830 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Register application/json 98 
+2025-03-08 11:40:48.1991 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' 
+2025-03-08 11:40:48.1991 [Info] Route matched with {action = "Register", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(ModelLayer.Model.UserModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:40:48.1991 [Info] User Controller initialized successfully 
+2025-03-08 11:40:48.1991 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:40:48.2319 [Info] Executed DbCommand (5ms) [Parameters=[@__user_Email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__user_Email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END 
+2025-03-08 11:40:48.3712 [Info] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [FirstName], [LastName], [Password])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [UserId]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [UserId] = scope_identity(); 
+2025-03-08 11:40:48.4250 [Info] User Registered: Vedant 
+2025-03-08 11:40:48.4250 [Info] Executing OkObjectResult, writing value of type 'ModelLayer.Model.ResponseModel`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:40:48.4250 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication) in 221.7093ms 
+2025-03-08 11:40:48.4250 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Register (HelloGreetingApplication)' 
+2025-03-08 11:40:48.4250 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Register application/json 98 - 200 - application/json;+charset=utf-8 235.6900ms 
+2025-03-08 11:41:17.4916 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 48 
+2025-03-08 11:41:17.4950 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:41:17.4950 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:41:17.4950 [Info] User Controller initialized successfully 
+2025-03-08 11:41:17.4950 [Info] Login attempt for user: Vedant 
+2025-03-08 11:41:17.4950 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:41:17.5112 [Info] Executed DbCommand (2ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:41:17.5112 [Warn] Invalid login attempt for user: Vedant 
+2025-03-08 11:41:17.5112 [Info] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:41:17.5112 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 9.3779ms 
+2025-03-08 11:41:17.5112 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:41:17.5112 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 48 - 401 - application/json;+charset=utf-8 23.6786ms 
+2025-03-08 11:41:23.1318 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-08 11:41:23.1355 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:41:23.1355 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:41:23.1355 [Info] User Controller initialized successfully 
+2025-03-08 11:41:23.1355 [Info] Login attempt for user: Vedant 
+2025-03-08 11:41:23.1355 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:41:23.1527 [Info] Executed DbCommand (8ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:41:23.1527 [Info] User Vedant logged in successfully. 
+2025-03-08 11:41:23.1527 [Info] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:41:23.1527 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 22.4339ms 
+2025-03-08 11:41:23.1527 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:41:23.1527 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 200 - application/json;+charset=utf-8 28.0572ms 
+2025-03-08 11:41:50.0610 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 89 
+2025-03-08 11:41:50.0610 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:41:50.0610 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:41:50.0610 [Info] User Controller initialized successfully 
+2025-03-08 11:41:50.0725 [Info] Login attempt for user: Vedant 
+2025-03-08 11:41:50.0725 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:41:50.0725 [Info] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:41:50.0725 [Warn] Invalid login attempt for user: Vedant 
+2025-03-08 11:41:50.0725 [Info] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:41:50.0725 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 13.7292ms 
+2025-03-08 11:41:50.0725 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:41:50.0725 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 89 - 401 - application/json;+charset=utf-8 24.2670ms 
+2025-03-08 11:42:29.1761 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 48 
+2025-03-08 11:42:29.1824 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:42:29.1824 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:42:29.1824 [Info] User Controller initialized successfully 
+2025-03-08 11:42:29.1824 [Info] Login attempt for user: string1 
+2025-03-08 11:42:29.1824 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:42:29.1824 [Info] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:42:29.2462 [Error] Login failed. System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at BusinessLayer.Services.UserBL.VerifyPassword(String enteredPassword, String storedPassword) in C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\BusinessLayer\Service\UserBL.cs:line 49
+   at BusinessLayer.Services.UserBL.CheckEmailPassword(String email, String password, UserEntity result) in C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\BusinessLayer\Service\UserBL.cs:line 45
+   at HelloGreetingApplication.Controllers.UserController.Login(LoginModel loginModel) in C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\Controllers\UserController.cs:line 80
+2025-03-08 11:42:29.2998 [Info] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType1`3[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:42:29.2998 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 115.469ms 
+2025-03-08 11:42:29.2998 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:42:29.2998 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 48 - 400 - application/json;+charset=utf-8 126.5355ms 
+2025-03-08 11:57:28.2334 [Info] Now listening on: https://localhost:7150 
+2025-03-08 11:57:28.2532 [Info] Now listening on: http://localhost:5143 
+2025-03-08 11:57:28.2921 [Info] Application started. Press Ctrl+C to shut down. 
+2025-03-08 11:57:28.2921 [Info] Hosting environment: Development 
+2025-03-08 11:57:28.2921 [Info] Content root path: C:\Users\Lenovo\OneDrive\Desktop\UC2\GreetingApp_2115100002\HelloGreetingApplication\ 
+2025-03-08 11:57:29.0398 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.html - - 
+2025-03-08 11:57:29.5899 [Info] Request starting HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-08 11:57:29.6065 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/index.js - - 
+2025-03-08 11:57:29.6594 [Info] Request starting HTTP/2 GET https://localhost:7150/_vs/browserLink - - 
+2025-03-08 11:57:29.6594 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.html - - - 200 - text/html;charset=utf-8 625.1773ms 
+2025-03-08 11:57:29.6594 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/index.js - - - 200 - application/javascript;charset=utf-8 54.5224ms 
+2025-03-08 11:57:29.6594 [Info] Request finished HTTP/2 GET https://localhost:7150/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 74.4718ms 
+2025-03-08 11:57:29.7699 [Info] Request finished HTTP/2 GET https://localhost:7150/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 110.4151ms 
+2025-03-08 11:57:29.8472 [Info] Request starting HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - 
+2025-03-08 11:57:29.8608 [Info] Request finished HTTP/2 GET https://localhost:7150/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 13.5639ms 
+2025-03-08 11:57:48.4796 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-08 11:57:48.5097 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:57:48.5413 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:57:48.7310 [Info] User Controller initialized successfully 
+2025-03-08 11:57:48.7606 [Info] Login attempt for user: Vedant 
+2025-03-08 11:57:49.3408 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:57:50.2111 [Info] Executed DbCommand (69ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:57:50.3066 [Info] User Vedant logged in successfully. 
+2025-03-08 11:57:50.3066 [Info] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:57:50.3066 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 1771.057ms 
+2025-03-08 11:57:50.3066 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:57:50.3230 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 200 - application/json;+charset=utf-8 1836.7102ms 
+2025-03-08 11:57:56.9514 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 48 
+2025-03-08 11:57:56.9514 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:57:56.9514 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:57:56.9514 [Info] User Controller initialized successfully 
+2025-03-08 11:57:56.9514 [Info] Login attempt for user: Vedant 
+2025-03-08 11:57:56.9631 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:57:56.9631 [Info] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:57:56.9631 [Warn] Invalid login attempt for user: Vedant 
+2025-03-08 11:57:56.9631 [Info] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:57:56.9792 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 18.6938ms 
+2025-03-08 11:57:56.9792 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:57:56.9792 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 48 - 401 - application/json;+charset=utf-8 26.3838ms 
+2025-03-08 11:58:02.7075 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 49 
+2025-03-08 11:58:02.7075 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:58:02.7075 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:58:02.7075 [Info] User Controller initialized successfully 
+2025-03-08 11:58:02.7134 [Info] Login attempt for user: Vedant 
+2025-03-08 11:58:02.7668 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:58:02.7668 [Info] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:58:02.7767 [Info] User Vedant logged in successfully. 
+2025-03-08 11:58:02.7767 [Info] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:58:02.7767 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 68.9382ms 
+2025-03-08 11:58:02.7767 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:58:02.7767 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 49 - 200 - application/json;+charset=utf-8 70.9603ms 
+2025-03-08 11:58:07.8585 [Info] Request starting HTTP/2 POST https://localhost:7150/User/Login application/json 50 
+2025-03-08 11:58:07.8585 [Info] Executing endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:58:07.8585 [Info] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ModelLayer.Model.LoginModel) on controller HelloGreetingApplication.Controllers.UserController (HelloGreetingApplication). 
+2025-03-08 11:58:07.8696 [Info] User Controller initialized successfully 
+2025-03-08 11:58:07.8696 [Info] Login attempt for user: Vedant7 
+2025-03-08 11:58:07.8696 [Info] Entity Framework Core 6.0.36 initialized 'UserContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None 
+2025-03-08 11:58:07.8860 [Info] Executed DbCommand (8ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[UserId], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0 
+2025-03-08 11:58:07.8860 [Warn] Invalid login attempt for user: Vedant7 
+2025-03-08 11:58:07.8860 [Info] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`2[[System.Boolean, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-08 11:58:07.8860 [Info] Executed action HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication) in 19.6302ms 
+2025-03-08 11:58:07.8860 [Info] Executed endpoint 'HelloGreetingApplication.Controllers.UserController.Login (HelloGreetingApplication)' 
+2025-03-08 11:58:07.8860 [Info] Request finished HTTP/2 POST https://localhost:7150/User/Login application/json 50 - 401 - application/json;+charset=utf-8 22.4376ms 

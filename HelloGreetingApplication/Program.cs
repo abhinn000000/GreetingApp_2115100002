@@ -7,9 +7,30 @@ using RepositoryLayer.Services;
 using RepositoryLayer.Context;
 using RepositoryLayer.Interface;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using HelloGreeting.Helper;
 
 
 var builder = WebApplication.CreateBuilder(args);
+//JWT Configuration 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    });
+
+builder.Services.AddAuthorization();
 
 //database connectivity
 var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
@@ -30,6 +51,7 @@ builder.Services.AddScoped<IGreetingBL, GreetingBL>();
 builder.Services.AddScoped<IGreetingRL, GreetingRL>();
 builder.Services.AddScoped<IUserRL, UserRL>();
 builder.Services.AddScoped<IUserBL, UserBL>();
+builder.Services.AddScoped<JwtTokenHelper>();
 
 
 //logger using NLog
@@ -42,7 +64,9 @@ builder.Logging.ClearProviders();
 builder.Host.UseNLog();
 var app = builder.Build();
 
-
+// for jwt
+app.UseAuthentication();
+app.UseAuthorization();
 
 //Add swagger to container
 

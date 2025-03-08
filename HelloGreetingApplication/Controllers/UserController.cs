@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Model;
 using NLog;
 using RepositoryLayer.Entity;
-
+using HelloGreeting.Helper;
 namespace HelloGreetingApplication.Controllers
 {
     /// <summary>
@@ -15,10 +15,11 @@ namespace HelloGreetingApplication.Controllers
     {
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         private readonly IUserBL _userBL;
-
-        public UserController(IUserBL userBL)
+        private readonly JwtTokenHelper _jwtTokenHelper;    
+        public UserController(IUserBL userBL,JwtTokenHelper jwtTokenHelper)
         {
             _userBL = userBL;
+            _jwtTokenHelper = jwtTokenHelper;
             _logger.Info("User Controller initialized successfully");
         }
 
@@ -82,8 +83,9 @@ namespace HelloGreetingApplication.Controllers
                     _logger.Warn("Invalid login attempt for user: {0}", loginModel.Email);
                     return Unauthorized(new { Success = false, Message = "Invalid username or password." });
                 }
+                var token = _jwtTokenHelper.GenerateToken(user);
                 _logger.Info("User {0} logged in successfully.", loginModel.Email);
-                return Ok(new { Success = true, Message = "Login Successful.", });
+                return Ok(new { Success = true, Message = "Login Successful.", Token = token }); // returning JWT token here
             }
             catch (Exception ex)
             {

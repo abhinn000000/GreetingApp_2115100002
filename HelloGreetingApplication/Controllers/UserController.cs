@@ -1,9 +1,12 @@
 ﻿using BusinessLayer.Interface;
+using BusinessLayer.Services;
+using HelloGreetingApplication.Helper;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Model;
 using NLog;
 using RepositoryLayer.Entity;
-using HelloGreeting.Helper;
+
+
 namespace HelloGreetingApplication.Controllers
 {
     /// <summary>
@@ -15,12 +18,16 @@ namespace HelloGreetingApplication.Controllers
     {
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
         private readonly IUserBL _userBL;
-        private readonly JwtTokenHelper _jwtTokenHelper;    
-        public UserController(IUserBL userBL,JwtTokenHelper jwtTokenHelper)
+        private readonly JwtTokenHelper _jwtTokenHelper;
+        private readonly EmailService _emailService;
+
+
+        public UserController(IUserBL userBL, JwtTokenHelper jwtTokenHelper, EmailService emailService)
         {
             _userBL = userBL;
-            _jwtTokenHelper = jwtTokenHelper;
             _logger.Info("User Controller initialized successfully");
+            _jwtTokenHelper = jwtTokenHelper;
+            _emailService = emailService;
         }
 
         /// <summary>
@@ -85,8 +92,10 @@ namespace HelloGreetingApplication.Controllers
                 }
                 var token = _jwtTokenHelper.GenerateToken(user);
                 _logger.Info("User {0} logged in successfully.", loginModel.Email);
-                return Ok(new { Success = true, Message = "Login Successful.", Token = token }); // returning JWT token here
+                return Ok(new { Success = true, Message = "Login Successful.", Token = token });
             }
+
+
             catch (Exception ex)
             {
                 _logger.Error(ex, "Login failed.");
@@ -106,17 +115,37 @@ namespace HelloGreetingApplication.Controllers
             var response = new ResponseModel<string>();
             try
             {
-                bool result = _userBL.ForgetPassword(email);
-                if (result)
+                var user = _userBL.GetUserByEmail(email);
+                if (user == null)
+                {
+                    _logger.Warn($"Forget Password request failed. Email not found: {email}");
+                    response.Success = false;
+                    response.Message = "Email Not Found";
+                    return NotFound(response);
+                }
+
+                string token = _jwtTokenHelper.GenerateToken(user);
+                if (string.IsNullOrEmpty(token))
+                {
+                    _logger.Error("JWT Token generation failed.");
+                    response.Success = false;
+                    response.Message = "Failed to generate reset token";
+                    return StatusCode(500, response);
+                }
+
+                bool emailSent = _emailService.SendResetEmail(email, token);
+                if (emailSent)
                 {
                     response.Success = true;
                     response.Message = "Reset Link Sent Successfully";
                     _logger.Info($"Reset Password Link Sent to: {email}");
                     return Ok(response);
                 }
+
+                _logger.Error("Failed to send reset email.");
                 response.Success = false;
-                response.Message = "Email Not Found";
-                return NotFound(response);
+                response.Message = "Failed to send reset email";
+                return StatusCode(500, response);
             }
             catch (Exception ex)
             {
@@ -127,28 +156,50 @@ namespace HelloGreetingApplication.Controllers
             }
         }
 
+
+
         /// <summary>
         /// API to Reset Password
         /// </summary>
         /// <param name="resetModel"></param>
         /// <returns></returns>
-        [HttpPost]
-        [Route("ResetPassword")]
-        public IActionResult ResetPassword(ResetPasswordModel resetPasswordModel)
+        [HttpPost("ResetPassword")]
+        public IActionResult ResetPassword(string token, string newPassword)
         {
-            var result = _userBL.ResetPassword(resetPasswordModel.Email, resetPasswordModel.NewPassword);
-            ResponseModel<string> responseModel = new ResponseModel<string>();
-            if (result == true)
+            var response = new ResponseModel<string>();
+            try
             {
-                responseModel.Success = true;
-                responseModel.Message = "Password Reset Successfull.";
-                responseModel.Data = "Your Password has been reset successfully";
-                return Ok(responseModel);
+                // Validate the token and extract the email
+                var email = _jwtTokenHelper.ValidateToken(token);
+                if (string.IsNullOrEmpty(email))
+                {
+                    response.Success = false;
+                    response.Message = "Invalid or Expired Token";
+                    return Unauthorized(response);
+                }
+
+                // Reset Password
+                bool result = _userBL.ResetPassword(email, newPassword);
+                if (result)
+                {
+                    response.Success = true;
+                    response.Message = "Password Reset Successfully";
+                    return Ok(response);
+                }
+
+                response.Success = false;
+                response.Message = "Password Reset Failed";
+                return BadRequest(response);
             }
-            responseModel.Success = false;
-            responseModel.Message = "Password Reset Failed or Email Not Found";
-            return BadRequest(responseModel);
+            catch (Exception ex)
+            {
+                _logger.Error($"Error in ResetPassword API: {ex.Message}");
+                response.Success = false;
+                response.Message = $"An error occurred: {ex.Message}";
+                return StatusCode(500, response);
+            }
         }
+
 
 
     }

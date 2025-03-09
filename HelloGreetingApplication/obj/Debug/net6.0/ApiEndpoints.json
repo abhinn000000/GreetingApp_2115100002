@@ -245,9 +245,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "resetPasswordModel",
-        "Type": "ModelLayer.Model.ResetPasswordModel",
-        "IsRequired": true
+        "Name": "token",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newPassword",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using HelloGreeting.Helper;
+using HelloGreetingApplication.Helper;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -52,6 +52,7 @@ builder.Services.AddScoped<IGreetingRL, GreetingRL>();
 builder.Services.AddScoped<IUserRL, UserRL>();
 builder.Services.AddScoped<IUserBL, UserBL>();
 builder.Services.AddScoped<JwtTokenHelper>();
+builder.Services.AddScoped<EmailService>();
 
 
 //logger using NLog

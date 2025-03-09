@@ -22,11 +22,6 @@ namespace RepositoryLayer.Services
         {
             this.context = context;
         }
-        public UserEntity GetUserByEmail(string email)
-        {
-            return context.Users.FirstOrDefault(user => user.Email == email);
-        }
-
         public bool Register(UserEntity user)
         {
             var isUserExist = context.Users.Any(u => u.Email == user.Email);
@@ -38,7 +33,24 @@ namespace RepositoryLayer.Services
             return true;
         }
 
-        public bool ForgotPassword(string email)
+        //public string Login(string email, string password)
+        //{
+        //    var user = context.Users.FirstOrDefault(u => u.Email == email);
+        //    if (user == null)
+        //        return "Invalid Email";
+
+        //    if (VerifyPassword(password, user.Password))
+        //        return "Login Successful";
+
+        //    return "Invalid Password";
+        //}
+        public UserEntity GetUserByEmail(string email)
+
+        {
+            return context.Users.FirstOrDefault(user => user.Email == email);
+        }
+
+        public bool ForgetPassword(string email)
         {
             var user = context.Users.FirstOrDefault(u => u.Email == email);
             if (user != null)
@@ -53,12 +65,13 @@ namespace RepositoryLayer.Services
             var user = context.Users.FirstOrDefault(u => u.Email == email);
             if (user != null)
             {
-                user.Password = BCrypt.Net.BCrypt.HashPassword(newPassword);
+                user.Password = HashPassword(newPassword);
                 context.SaveChanges();
-                return true; // Return true if password reset is successful
+                return true;
             }
-            return false; // Return false if user not found
+            return false;
         }
+
         public string HashPassword(string password)
         {
             byte[] salt;

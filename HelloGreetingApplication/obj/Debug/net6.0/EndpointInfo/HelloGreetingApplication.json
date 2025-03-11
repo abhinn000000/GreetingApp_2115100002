@@ -448,6 +448,14 @@
           "greetingMessage": {
             "type": "string",
             "nullable": true
+          },
+          "userEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

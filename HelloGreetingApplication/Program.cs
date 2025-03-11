@@ -35,8 +35,7 @@ builder.Services.AddAuthorization();
 //database connectivity
 var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
 builder.Services.AddDbContext<GreetingContext>(options => options.UseSqlServer(connectionString));
-var ConnectionString = builder.Configuration.GetConnectionString("SqlConnection");
-builder.Services.AddDbContext<UserContext>(options => options.UseSqlServer(ConnectionString));
+
 
 
 
@@ -63,11 +62,20 @@ logger.Debug("init main");
 
 builder.Logging.ClearProviders();
 builder.Host.UseNLog();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        policy => policy.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+});
+
 var app = builder.Build();
+
 
 // for jwt
 app.UseAuthentication();
-app.UseAuthorization();
 
 //Add swagger to container
 
@@ -75,9 +83,10 @@ app.UseSwagger();
     app.UseSwaggerUI();
 
 
-    // Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline.
+app.UseCors("AllowAll");
 
-    app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
     app.UseAuthorization();
 

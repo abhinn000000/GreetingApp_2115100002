@@ -33,7 +33,8 @@ namespace HelloGreetingApplication.Helper
 
             var claims = new[]
             {
-                new Claim("userId", user.FirstName),
+                new Claim("userId", user.UserId.ToString()) ,// changed UserId.ToString() to user.FirstName
+                new Claim("userName", user.FirstName),
                 new Claim("email", user.Email)
             };
 

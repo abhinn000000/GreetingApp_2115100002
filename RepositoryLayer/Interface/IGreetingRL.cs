@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ModelLayer.Model;
+﻿using ModelLayer.Model;
 using RepositoryLayer.Entity;
+using System.Collections.Generic;
 
 namespace RepositoryLayer.Interface
 {
@@ -14,11 +10,10 @@ namespace RepositoryLayer.Interface
 
         public bool GreetMessage(GreetingModel greetModel);
 
-        public GreetingModel GetGreetingById(int ID);
+        public GreetingModel GetGreetingById(int ID, string email); // Updated to include email
+        List<GreetingEntity> GetAllGreetings(string email);         // Updated to include email
 
-        public List<GreetingEntity> GetAllGreetings();
-
-        public GreetingEntity EditGreeting(int id, GreetingModel greetingModel);
-        public bool DeleteGreeting(int id);
+        public GreetingEntity EditGreeting(int id, GreetingModel greetingModel, string email); // Updated to include email
+        public bool DeleteGreeting(int id, string email); // Updated to include email
     }
 }

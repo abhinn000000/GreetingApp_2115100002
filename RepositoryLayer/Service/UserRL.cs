@@ -13,12 +13,12 @@ namespace RepositoryLayer.Services
     public class UserRL : IUserRL
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
-        private readonly UserContext context;
+        private readonly GreetingContext context;
         private const int SaltSize = 16;
         private const int HashSize = 20;
         private const int Iterations = 10000;
 
-        public UserRL(UserContext context)
+        public UserRL(GreetingContext context)
         {
             this.context = context;
         }

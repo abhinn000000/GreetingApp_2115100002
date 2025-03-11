@@ -1,22 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using ModelLayer.Model;
 
 namespace BusinessLayer.Interface
 {
     public interface IGreetingBL
     {
-        public string greet();
-        public string UserGreet(UserGreetModel usergreet);
+        string Greet();
+        string UserGreet(UserGreetModel usergreet);
 
-        public bool GreetMessage(GreetingModel greetModel);
+        bool GreetMessage(GreetingModel greetModel);
 
-        public GreetingModel GetGreetingById(int id);
-        public List<GreetingModel> GetAllGreetings();
-        public GreetingModel EditGreeting(int id, GreetingModel greetingModel);
-        public bool DeleteGreeting(int id);
+        GreetingModel GetGreetingById(int id, string email);  // Updated to include email
+        List<GreetingModel> GetAllGreetings(string email);    // Updated to include email
+
+        GreetingModel EditGreeting(int id, GreetingModel greetingModel, string email); // Updated to include email
+
+        bool DeleteGreeting(int id, string email); // Updated to include email
     }
 }

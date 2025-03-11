@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RepositoryLayer.Entity
 {
@@ -14,5 +11,11 @@ namespace RepositoryLayer.Entity
 
         [Required]
         public string Greeting { get; set; }
+
+        [Required]
+        [ForeignKey("User")]
+        public int UserId { get; set; }
+
+        public virtual UserEntity User { get; set; }
     }
 }

@@ -2,9 +2,9 @@
 
 #nullable disable
 
-namespace RepositoryLayer.Migrations.AppDb
+namespace RepositoryLayer.Migrations
 {
-    public partial class User : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using HelloGreetingApplication.Helper;
+using StackExchange.Redis;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -36,9 +37,9 @@ builder.Services.AddAuthorization();
 var connectionString = builder.Configuration.GetConnectionString("SqlConnection");
 builder.Services.AddDbContext<GreetingContext>(options => options.UseSqlServer(connectionString));
 
-
-
-
+// Configure Redis connection
+var redisConfig = builder.Configuration.GetSection("Redis:ConnectionString").Value;
+builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisConfig));
 
 
 // Add services to the container.

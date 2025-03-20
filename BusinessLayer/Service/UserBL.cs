@@ -6,20 +6,39 @@ using System.Net.Mail;
 using System.Net;
 using System.Security.Cryptography;
 using NLog;
+using StackExchange.Redis;
+using System.Text.Json;
 
 namespace BusinessLayer.Services
 {
     public class UserBL : IUserBL
     {
         private readonly IUserRL _userRL;
+        private readonly IDatabase _cache;
+
         private const int SaltSize = 16;
         private const int HashSize = 20;
         private const int Iterations = 10000;
         private static readonly Logger _logger = LogManager.GetCurrentClassLogger();
-        public UserBL(IUserRL userRL)
+        public UserBL(IUserRL userRL, IConnectionMultiplexer redis)
         {
             _userRL = userRL;
+            _cache = redis.GetDatabase();
+        }
+        public async Task<IEnumerable<UserEntity>> GetUsersAsync()
+        {
+            string cacheKey = "users_list";
 
+            // Try getting data from Redis cache
+            var cachedData = await _cache.StringGetAsync(cacheKey);
+            if (!cachedData.IsNullOrEmpty)
+            {
+                return JsonSerializer.Deserialize<IEnumerable<UserEntity>>(cachedData);
+            }
+            var products = await _userRL.GetUsersAsync();
+            await _cache.StringSetAsync(cacheKey, JsonSerializer.Serialize(products), TimeSpan.FromMinutes(10));
+
+            return products;
         }
 
         public bool Register(UserEntity user)

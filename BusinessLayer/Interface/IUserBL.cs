@@ -14,6 +14,7 @@ namespace BusinessLayer.Interface
         public bool ResetPassword(string email, string newPassword);
         public bool VerifyPassword(string enteredPassword, string storedPassword);
         public bool SendResetEmail(string email, string token);
+        Task<IEnumerable<UserEntity>> GetUsersAsync();
 
     }
 }

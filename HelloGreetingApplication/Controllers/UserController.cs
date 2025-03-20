@@ -200,7 +200,13 @@ namespace HelloGreetingApplication.Controllers
             }
         }
 
-
+        [HttpGet]
+        [Route("GetUsers")] //to check redis
+        public async Task<ActionResult<IEnumerable<UserEntity>>> GetUsers()
+        {
+            var Users = await _userBL.GetUsersAsync();
+            return Ok(Users);
+        }
 
     }
 }

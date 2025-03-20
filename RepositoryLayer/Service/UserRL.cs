@@ -6,7 +6,10 @@ using RepositoryLayer.Interface;
 using System.Security.Cryptography;
 using System.Text;
 using RepositoryLayer.Context;
+using Dapper;
 using NLog;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
 
 namespace RepositoryLayer.Services
 {
@@ -14,13 +17,21 @@ namespace RepositoryLayer.Services
     {
         private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         private readonly GreetingContext context;
+        private readonly string _connectionString;
+
         private const int SaltSize = 16;
         private const int HashSize = 20;
         private const int Iterations = 10000;
 
-        public UserRL(GreetingContext context)
+        public UserRL(GreetingContext context, IConfiguration configuration)
         {
             this.context = context;
+            _connectionString = configuration.GetConnectionString("SqlConnection");
+        }
+        public async Task<IEnumerable<UserEntity>> GetUsersAsync()
+        {
+            using var connection = new SqlConnection(_connectionString);
+            return await connection.QueryAsync<UserEntity>("SELECT * FROM Users");
         }
         public bool Register(UserEntity user)
         {

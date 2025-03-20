@@ -16,5 +16,7 @@ namespace RepositoryLayer.Interface
         public bool ForgetPassword(string email);
         public bool ResetPassword(string email, string newPassword);
         public string HashPassword(string password);
+
+        Task<IEnumerable<UserEntity>> GetUsersAsync();
     }
 }
